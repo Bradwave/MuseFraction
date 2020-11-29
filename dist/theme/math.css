@@ -669,3 +669,85 @@ body {
   transform: scale(0.8);
   transition: all 2s ease;
 }
+
+/*********************************************
+ * SHAPES ANIMATIONS
+ *********************************************/
+
+:root {
+  --radius: 150px
+}
+
+.reveal .slides section .fragment.first-step, .reveal .slides section .fragment.second-step, .reveal .slides section .fragment.thid-step, .reveal .slides section .fragment.circle-scale {
+  opacity: 0;
+  visibility: inherit
+}
+
+.reveal .slides section .fragment.first-step.visible, .reveal .slides section .fragment.second-step.visible, .reveal .slides section .fragment.third-step.visible {
+  opacity: 1;
+  transition: all 2s ease;
+}
+
+.reveal .slides section .fragment.first-step.visible {
+  transform: translate(0px, calc(var(--radius)*2));
+}
+
+.reveal .slides section .fragment.second-step.visible {
+  transform: translate(calc(var(--radius)*0.778), calc(var(--radius)*(-1.778)));
+}
+
+.reveal .slides section .fragment.third-step.visible {
+  transform: translate(calc(var(--radius)*(-1.794)), calc(var(--radius)*(1.199)));
+}
+
+.reveal .slides section .fragment.circle-scale.visible {
+  opacity: 1;
+  transform: scale(var(--scale));
+  border: calc(1.2/var(--scale));
+  transition: all 1s ease;
+}
+
+.reveal .slides div.points {
+  transform: translate(0px, calc(var(--radius)*(-1)));
+}
+
+.reveal .slides p.scaled-circle {
+  width: calc(var(--radius)*var(--sca));
+  height: calc(var(--radius)*calc(2*var(--scale)));
+  border: 1.2pt;
+}
+
+/*********************************************
+ * SHAPES
+ *********************************************/
+
+.reveal #circle {
+  width: calc(var(--radius)*2);
+  height: calc(var(--radius)*2);
+  background: #ffffff04;
+  border: #ffffff54 dotted 1pt;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.reveal #point {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px #000000;
+  margin: auto;
+}
+
+.reveal #f-label {
+  line-height: 220%;
+  text-shadow: 0px 0px 8px #000000;
+}
+
+.reveal #line {
+  width: 1px;
+  height: calc(var(--radius)*1.9);
+  background: #969696;
+  transform: translate(0px, calc(var(--radius)*(-0.95))) rotate(var(--angle));
+  transform-origin: bottom center;
+}

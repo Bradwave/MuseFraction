@@ -217,21 +217,103 @@
 								</a>
 							</span>
 						</span> e ottenere
-						$ \bigg\{ \left( \dfrac{3}{2} \right)^n f \: : \: n \in \mathbb{N} \bigg\} \subset \mathbb{S} \,$.
+						$ \bigg\{ \left( \dfrac{3}{2} \right)^n f \: : \: n \in \mathbb{N} \bigg\} \subset \mathbb{S}
+						\,$.
 					</p>
 				</div>
 				<div class="fragment fade-down">
 					<p>
 						$\require{extpfeil}\Newextarrow{\xRightarrow}{5,5}{0x21D2}$
 						\[
-							f \in \mathbb{S} \ \xRightarrow{1.5} \ \dfrac{3}{2}f \in \mathbb{S}
-							\ \xRightarrow{1.5} \ \left( \dfrac{3}{2} \right)^2 f \in \mathbb{S}
-							\ \xRightarrow{1.5} \ ...
-							\ \xRightarrow{1.5} \ \left( \dfrac{3}{2} \right)^n f \in \mathbb{S}
+						f \in \mathbb{S} \ \xRightarrow{1.5} \ \dfrac{3}{2}f \in \mathbb{S}
+						\ \xRightarrow{1.5} \ \left( \dfrac{3}{2} \right)^2 f \in \mathbb{S}
+						\ \xRightarrow{1.5} \ ...
+						\ \xRightarrow{1.5} \ \left( \dfrac{3}{2} \right)^n f \in \mathbb{S}
 						\]
 					</p>
 				</div>
+			</section>
 
+			<section class="center">
+				<div class="r-stack fragment fade-in" data-fragment-index="1" style="margin: auto">
+					<p id="circle"></p>
+					<p id="circle" class="fragment circle-scale" style="--scale: 1.1;" data-fragment-index="4">
+
+					</p>
+					<p id="circle" class="fragment circle-scale" style="--scale: 1.2;" data-fragment-index="5">
+					</p>
+					<div class="r-stack fragment zoom-in" data-fragment-index="6">
+						<p id="circle" style="transform: scale(1.3);"></p>
+						<p id="circle" style="transform: scale(1.4);"></p>
+						<p id="circle" style="transform: scale(1.5);"></p>
+						<p id="circle" style="transform: scale(1.6);"></p>
+						<p id="circle" style="transform: scale(1.69);"></p>
+						<p id="circle" style="transform: scale(1.78);"></p>
+					</div>
+					<div class="r-stack points fragment zoom-in" data-fragment-index="10">
+						<p id="line" style="--angle: 0deg;"></p>
+						<p id="line" style="--angle: 45deg;"></p>
+						<p id="line" style="--angle: 180deg;"></p>
+					</div>
+					<div class="points fragment fade-in" data-fragment-index="2">
+						<div class="r-stack">
+							<p id="point">
+								<span id="f-label">$\ f$</span>
+							</p>
+							<div id="point" class="r-stack fragment first-step" data-fragment-index="3">
+								<p id="point">
+									<span id="f-label">$\ \frac{3}{2}f$</span>
+								</p>
+								<div class="r-stack fragment second-step" data-fragment-index="7">
+									<p id="point">
+										<span id="f-label">$\ \frac{9}{4}f$</span>
+									</p>
+									<p id="point" class="fragment third-step" data-fragment-index="8">
+										<span id="f-label">$\ \frac{27}{8}f$</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="r-stack fragment zoom-in" data-fragment-index="9">
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*1.194), calc(var(--radius)*0.118));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*(-0.715)), calc(var(--radius)*(-0.964)));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*0.599), calc(var(--radius)*1.154));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*0.579), calc(var(--radius)*(-1.275)));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*(-0.836)), calc(var(--radius)*1.123));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*1.43), calc(var(--radius)*0.451));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*(-1.421)), calc(var(--radius)*-0.482));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*1.285), calc(var(--radius)*0.953));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*0.146), calc(var(--radius)*(-1.694)));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*(-0.218)), calc(var(--radius)*1.686));">
+						</p>
+						<p id="point"
+							style="transform: translate(calc(var(--radius)*1.389), calc(var(--radius)*(-1.144)));">
+						</p>
+					</div>
+				</div>
+				<div>
+
+				</div>
 			</section>
 
 			<!-- Il contesto storico -->
@@ -281,8 +363,11 @@
 
 			// Don't forget to add the dependencies
 			dependencies: [
+				// Multiplex
 				{ src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-				{ src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+				{ src: 'https://reveal-multiplex.glitch.me/client.js', async: true },
+				// Other plugins
+				{ src: 'node_modules/revealjs-animated/dist/revealjs-animated.js', async: true }
 			]
 		});
 	</script>
