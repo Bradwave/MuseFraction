@@ -5,21 +5,245 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+	<link rel="icon" type="image/png" href="images/icon.png">
+
 	<title>MuseFraction</title>
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="dist/theme/math.css" id="theme">
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+	<!-- MathJax -->
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			}
+		};
+	</script>
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>Slide 1</section>
-			<section>Slide 2</section>
+
+			<!-- Titolo -->
+			<section class="center" id="titolo" data-transition="zoom-in-soft zoom-out-soft">
+				<h3>MUSICA,</h3>
+				<br>
+				<h5>MATEMATICA</h5>
+				<h6>E</h6>
+				<h4>FRAZIONI CONTINUE</h4>
+				<br><br>
+				<h6 style="font-size: 48%;">MATTEO BRAMARDI</h6>
+			</section>
+
+			<!-- Conosciamoci -->
+			<section data-background-iframe="https://flinga.fi/s/FH65N2K" data-preload class="center" id="conosciamoci">
+			</section>
+
+			<!-- Il problema del temperamento -->
+			<section id="temperamento" data-transition="zoom-in-soft">
+				<h4>Il problema del temperamento $ $</h4>
+				<hr>
+				<div class="fragment fade-down" style="margin-top: 320px;">
+					<blockquote class="formula" data-id="formula-box" style="padding: 20px;">
+						A quali frequenze corrispondono le 12 note di una scala?
+					</blockquote>
+				</div>
+			</section>
+
+			<!-- Piano game pt.1 -->
+			<section data-background-iframe="https://bradwave.github.io/PianoFreq" data-preload class="center"
+				id="conosciamoci">
+			</section>
+
+			<new-chapter></new-chapter>
+			<one-formula></one-formula>
+
+			<!-- Il sistema musicale -->
+			<section data-auto-animate id="sistema-musicale">
+				<h4>1.1 Il sistema musicale $ $</h4>
+				<hr>
+				<p>
+					Vogliamo definire un
+					<bem class="fragment highlight-yellow">
+						sistema musicale
+					</bem>
+					$\mathbb{S}$,<br>
+					ovvero un insieme di frequenze a cui sono associate delle note.
+				</p>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						Tuttavia, non lo descriviamo esplicitamente.<br>
+						Forniamo al posto una serie di proprietà che deve rispettare.
+					</p>
+				</div>
+				<div class="fragment fade-in" style="margin-top: 5%;">
+					<blockquote data-id="s-def" class="def" style="width: 60%;">
+						$$ \mathbb{S} \neq \varnothing $$
+						<div class="number def auto"></div>
+					</blockquote>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						Quindi $\exists \, f \in \mathbb{R} \: : \: f \in \mathbb{S} \,$,<br>
+						detta <bem class="fragment highlight-yellow">frequenza fondamentale</bem>.
+					</p>
+				</div>
+			</section>
+
+			<two-formulas></two-formulas>
+
+			<!-- Le proprietà del sistema musicale -->
+			<section data-auto-animate id="sistema-musicale-2">
+				<h4>1.2 Raddoppiare le frequenze $ $</h4>
+				<hr>
+				<p>
+					Ovviamente l'esistenza della sola frequenza fondamentale non è sufficiente.<br>
+					Abbiamo bisogno di introdurre altre regole che definiscono $\mathbb{S}$.
+				</p>
+				<blockquote data-id="s-def" class="def" style="margin-top: 5%;">
+					<div class="fragment fade-in">
+						$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S} \, , \ k=\pm 1 $$
+					</div>
+					<div class="number def auto first"></div>
+				</blockquote>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						Da cui segue immediatamente
+					</p>
+				</div>
+				<div class="fragment fade-down">
+					<blockquote class="theorem">
+						<b>Teorema</b>
+						$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S} \, , \ \forall k \in \mathbb{Z}$$
+						<div class="number theorem auto second"></div>
+					</blockquote>
+				</div>
+			</section>
+
+			<two-formulas></two-formulas>
+
+			<!-- Le proprietà del sistema musicale pt.2 -->
+			<section data-auto-animate id="sistema-musicale-3">
+				<h4>1.3 Triplicare le frequenze $ $</h4>
+				<hr>
+				<p>
+					L'attuale struttura di $\mathbb{S}$ non è ancora soddisfaciente.<br>
+					Introduciamo un'altra proprietà:
+				</p>
+				<div class="fragment fade-in">
+					<blockquote data-id="s-def" class="def" style="margin-top: 5%;">
+						$$ f \in \mathbb{S} \ \Longrightarrow \ 3f \in \mathbb{S}$$
+						<div class="number def auto first "></div>
+					</blockquote>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						Combinando <span class="number def tooltip top">(1.2)
+							<span class="tooltiptext top def">
+								<a href="#/sistema-musicale">
+									$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S} \, , \ k=\pm 1 $$
+								</a>
+							</span>
+						</span> e <span class="number def tooltip top">(1.4)
+							<span class="tooltiptext top def">
+								<a href="#/sistema-musicale-3">
+									$$ f \in \mathbb{S} \ \Longrightarrow \ 3f \in \mathbb{S} $$
+								</a>
+							</span>
+						</span> otteiniamo
+					</p>
+				</div>
+				<div class="fragment fade-in">
+					<blockquote data-id="s-theorem" class="theorem">
+						<b>Teorema</b>
+						$$ f \in \mathbb{S} \ \Longrightarrow \ \dfrac{3}{2}f \in \mathbb{S} \, , \ \forall k \in
+						\mathbb{Z} $$
+						<div class="number theorem auto second"></div>
+					</blockquote>
+				</div>
+			</section>
+
+			<!-- Intervali -->
+			<section data-auto-animate id="intervalli">
+				<h4>1.4 Gli intervalli</h4>
+				<hr>
+				<p style="margin-top: 8%;">
+					Il rapporto tra due elementi di $\mathbb{S}$ è detto
+					<bem class="fragment highlight-yellow">intervallo</bem>.<br>
+					In partcolare, dato $f \in \mathbb{S}$,
+				</p><br>
+				<blockquote data-id="s-def" class="def">
+					<div class="fragment fade-in" style="padding: 15px;">
+						$\dfrac{2f}{f} = 2 := \,$
+						<span style="font-style: normal;">
+							intervallo di ottava
+							(o <bem class="fragment highlight-yellow">ottava</bem>)
+						</span>
+					</div>
+				</blockquote>
+				<blockquote data-id="s-theorem" class="def" style="margin-top: 5%;">
+					<div class="fragment fade-in" style="padding: 15px;">
+						$\dfrac{3f}{2f} = \dfrac{3}{2} := \,$
+						<span style="font-style: normal;">
+							intervallo di quinta
+							(o <bem class="fragment highlight-yellow">quinta</bem>)
+						</span>
+					</div>
+				</blockquote>
+			</section>
+
+			<!-- Intervali -->
+			<section data-auto-animate id="sistema-musicale-4">
+				<h4>1.5 Reiterare la quinta</h4>
+				<hr>
+				<p>
+					Il nostro obiettivo è individuare gli elementi di $\mathbb{S}$.<br>
+				</p>
+				<div class="fragment fade-down" style="margin-top: 2%;">
+					<p>
+						Possiamo reiterare <span class="number theorem tooltip top">(1.5)
+							<span class="tooltiptext top theorem">
+								<a href="#/sistema-musicale-3">
+									$$ f \in \mathbb{S} \ \Longrightarrow \ \dfrac{3}{2}f \in \mathbb{S} $$
+								</a>
+							</span>
+						</span> e ottenere
+						$ \bigg\{ \left( \dfrac{3}{2} \right)^n f \: : \: n \in \mathbb{N} \bigg\} \subset \mathbb{S} \,$.
+					</p>
+				</div>
+				<div class="fragment fade-down">
+					<p>
+						$\require{extpfeil}\Newextarrow{\xRightarrow}{5,5}{0x21D2}$
+						\[
+							f \in \mathbb{S} \ \xRightarrow{1.5} \ \dfrac{3}{2}f \in \mathbb{S}
+							\ \xRightarrow{1.5} \ \left( \dfrac{3}{2} \right)^2 f \in \mathbb{S}
+							\ \xRightarrow{1.5} \ ...
+							\ \xRightarrow{1.5} \ \left( \dfrac{3}{2} \right)^n f \in \mathbb{S}
+						\]
+					</p>
+				</div>
+
+			</section>
+
+			<!-- Il contesto storico -->
+			<section id="contesto-storico">
+				<h4>1.2 Il contesto storico $ $</h4>
+				<hr>
+				<br><br>
+				<div class="fragment fade-down">
+					<img class="plain" src="images/storia.jpg" alt="" style="width: 50%; margin-top: -20px;">
+				</div>
+			</section>
+
 		</div>
 	</div>
 
@@ -27,15 +251,23 @@
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
+
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
-			controls: false,
-			keyboard: false,
-			touch: false,
+			// controls: false,
+			// keyboard: false,
+			// touch: false,
+
+			center: false,
+			transition: 'fade',
+			transitionSpeed: 'slow',
+			backgroundTransition: 'fade',
+			backgroundTransitionSpeed: 'slow',
 
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
