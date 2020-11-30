@@ -136,7 +136,7 @@
 				<h4>1.3 Triplicare le frequenze $ $</h4>
 				<hr>
 				<p>
-					L'attuale struttura di $\mathbb{S}$ non è ancora soddisfaciente.<br>
+					L'attuale struttura di $\mathbb{S}$ non è ancora soddisfacente.<br>
 					Introduciamo un'altra proprietà:
 				</p>
 				<div class="fragment fade-in">
@@ -162,7 +162,7 @@
 						</span> otteiniamo
 					</p>
 				</div>
-				<div class="fragment fade-in">
+				<div class="fragment fade-in" style="margin-top: 4%;">
 					<blockquote data-id="s-theorem" class="theorem">
 						<b>Teorema</b>
 						$$ f \in \mathbb{S} \ \Longrightarrow \ \dfrac{3}{2}f \in \mathbb{S} \, , \ \forall k \in
@@ -206,7 +206,7 @@
 				<h4>1.5 Reiterare la quinta</h4>
 				<hr>
 				<p>
-					Il nostro obiettivo è individuare gli elementi di $\mathbb{S}$.<br>
+					Il nostro obiettivo è individuare altri elementi di $\mathbb{S}$.<br>
 				</p>
 				<div class="fragment fade-down" style="margin-top: 2%;">
 					<p>
@@ -382,26 +382,476 @@
 				</div>
 			</section>
 
+			<one-formula></one-formula>
+
 			<!-- Il calcolo del logaritmo -->
-			<section id="logaritmo"></section>
+			<section id="logaritmo" data-auto-animate>
+				<br>
+				<p>
+					Il nostro obiettivo è trovare una soluzione di
+					$$ \left( \cfrac{3}{2} \right)^n = \: 2^{\, m} $$
+				</p>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						$n := $ <bem class="fragment highlight-blue">numero di note</bem> nella scala;
+					</p>
+				</div>
+				<div style="display: table; clear: both; margin: auto; margin-top: 8%;">
+					<div class=" fragment fade-down" style="float: left; width: 50%;">
+						<p>
+							$$ \log \left( \cfrac{3}{2} \right)^n = \log 2^m $$
+						</p>
+					</div>
+					<div class=" fragment fade-right" style="float: right; width: 50%;">
+						<p>
+							$$ \Longrightarrow \ n \log \cfrac{3}{2} = m \log 2 $$
+						</p>
+					</div>
+				</div>
+				<div class="fragment fade-in">
+					<blockquote data-id="log" class="formula" style="width: 60%;">
+						<div class="r-stack">
+							<div class="fragment fade-in-then-out">
+								$$ \cfrac{m}{n} = \cfrac{\log \frac{3}{2}}{\log 2} = \log_{\, 2} \cfrac{3}{2}$$
+							</div>
+							<div class="fragment fade-in">
+								$$ \cfrac{m}{n} = \log_{\, 2} \cfrac{3}{2} $$
+							</div>
+						</div>
+						<div class="number formula auto"></div>
+					</blockquote>
+				</div>
+			</section>
+
+			<!-- Interpretazione del logaritmo -->
+			<section id="logartimo-2" data-auto-animate>
+				<br>
+				<blockquote data-id="log" class="formula" style="width: 60%;">
+					$$ \cfrac{m}{n} = \log_{\, 2} \cfrac{3}{2}$$
+					<div class="number formula">(1.6)</div>
+				</blockquote>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						$\log_{\, 2} {3 \over 2}$ è irrazionale!
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						Se riuscissimo ad approssimarlo con una frazione,<br>
+						potremmo ricavare $m$ ed $n$.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						Tuttavia, troncare un numero dopo un certo numero di cifre decimali<br>
+						non garantisce che il razionale risultante sia una buona approssimazione.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<blockquote class="formula" style="height: 40px;">
+						<p>
+							Cos'è una buona approssimazione per un numero irrazional $x \,$?
+						</p>
+					</blockquote>
+				</div>
+			</section>
+
+			<new-chapter></new-chapter>
 
 			<!-- La migliore approssimazione -->
-			<section id="migliore-approssimazione"></section>
+			<section id="miglior-approssimazione">
+				<h4>2.1 Le miglior approssimazioni $ $</h4>
+				<hr>
+				<p>
+					Dato un numero $x \in \mathbb{R} \,$, $\cfrac{a}{b} \in \mathbb{Q}$ è detta
+					<bem class="fragment highlight-blue" data-fragment-index="1">miglior approssimazione</bem>
+					di $x$<br>
+					se $\forall c,d \in \mathbb{Z} \: : \: d \in (0,b] \ \land \ c \neq a \, \text{ se } \, b = d$,
+					allora
+					$$ \left\vert x - \cfrac{a}{b} \right\vert \lt \left\vert x - \cfrac{c}{d} \right\vert \, .$$
+				</p>
+				<div class="fragment fade-down" style="margin-top: 3%;" data-fragment-index="2">
+					<p>
+						Ovvero, $\cfrac{a}{b}$ è più vicino a $x$ di qualunque altro razionale <br>
+					</p>
+				</div>
+				<div class="fragment fade-down" data-fragment-index="3">
+					<p>
+						con denominatore minore (o uguale, ma con numeratore diverso).
+					</p>
+				</div>
+				<div class="r-stack fragment fade-in" style="margin-top: 5%;" data-fragment-index="4">
+					<p id="h-line" style="z-index: -2;"></p>
+					<p id="point"></p>
+					<p id="label" style="margin-top: 30px;">$x$</p>
+					<div class="fragment fade-in" data-fragment-index="6" style="z-index: -1;">
+						<div class="fragment fade-out" data-fragment-index="8">
+							<p id="h-line" style="z-index: -1; width: 152px; --color: var(--blue);"></p>
+						</div>
+					</div>
+					<div class="r-stack fragment fade-out" data-fragment-index="8">
+						<div class="r-stack fragment zoom-in" data-fragment-index="5">
+							<p id="label" style="transform: translate(0px, -3px);">($\qquad\qquad\qquad$)</p>
+							<div class="r-stack">
+								<p id="point" style="width: 8px; height: 8px; transform: translate(76px, 0px);"></p>
+								<p id="label" style="transform: translate(90px, 25px);">$\cfrac{a}{b}$</p>
+							</div>
+						</div>
+					</div>
+					<div class="fragment fade-in" style="z-index: -1;" data-fragment-index="7">
+						<p id="h-line" style="width: 106px; --color: var(--blue);"></p>
+
+					</div>
+					<div class="r-stack fragment fade-in" data-fragment-index="7">
+						<p id="label" style="transform: translate(0px, -3px);">($\qquad\qquad$)</p>
+						<div class="r-stack">
+							<p id="point" style="width: 8px; height: 8px; transform: translate(53px, 0px);"></p>
+							<p id="label" style="font-size: 12pt; transform: translate(58px, 25px);">$\cfrac{a'}{b'}$
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 6%;" data-fragment-index="9">
+					<blockquote class="formula" style="height: 40px;">
+						<p>
+							Come facciamo a trovare le miglior approssimazioni di un numero?
+						</p>
+					</blockquote>
+				</div>
+			</section>
 
 			<!-- Le frazione continue -->
-			<section id="frazione-continue"></section>
+			<section id="frazione-continue">
+				<h4>2.2 Le frazioni continue $ $</h4>
+				<hr>
+				<p>
+					Ogni numero reale $x$ può essere rappresentato in modo unico<br>
+					come sviluppo in
+					<bem class="fragment highlight-blue" data-fragment-index="1">frazione continua</bem>, ovvero:
+				</p>
+				<div style="display: table; clear: both; margin: auto; margin-top: 5%;">
+					<div class="fragment fade-down" style="float: left; width: 50%;" data-fragment-index="2">
+						<p>
+							$ x = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 + \cfrac{1}{...}}}} \ $
+						</p>
+					</div>
+					<div class="fragment fade-right" style="float: right; width: 50%;" data-fragment-index="3">
+						<p>
+							$ \quad = \, [a_0, a_1, a_2, a_3, ...] $
+						</p>
+					</div>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;" data-fragment-index="4">
+					<p>
+						Se $x \in \mathbb{Q} \,$, allora lo sviluppo è finito: $x = [a_0,a_1,...,a_n] \,$.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 1%;" data-fragment-index="5">
+					<p>
+						Se $x \in \mathbb{R} \setminus \mathbb{Q} \,$, allora lo sviluppo è infinito: $x =
+						[a_0,a_1,a_2,...] \,$.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 7%;" data-fragment-index="6">
+					<blockquote class="formula" style="width: 70%; height: 40px;">
+						<p>
+							Come calcoliamo lo sviluppo in FC di un numero?
+						</p>
+					</blockquote>
+				</div>
+			</section>
 
-			<!-- La soluzione al temperamento pitagorico -->
-			<section id="temperamento-pitagorico"></section>
+			<!-- Esempio di frazione continua -->
+			<section id="frazioni-continue-2" data-auto-animate>
+				<h4>2.2 Le frazioni continue $ $</h4>
+				<hr>
+				<p>
+					Consideriamo, per esempio, il numero irrazionale (e trascendete) $\pi \in \mathbb{R} \,$.
+				</p>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						$ \pi = 3,1415926535... $
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						<bem class="fragment highlight-blue">parte intera</bem>
+						di $\pi := \lfloor \pi \rfloor = 3$
+						<span class="fragment fade-in">
+							$\ \Longrightarrow \ \pi = 3 + 0.1415... = 3 + \cfrac{1}{a_1} $
+						</span>
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 2%;">
+					<p>
+						dove $ a_1 = 7.0625... = 7 + {1 \over a_2} $
+						<span class="fragment fade-in">
+							$ \ \Longrightarrow \ \pi = 3 + \cfrac{1}{7 + \cfrac{1}{a_2 + ...}} = [3,7,...]$
+						</span>
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						$ \Longrightarrow \ \pi = [3,7,15,1,292,...]$
+					</p>
+				</div>
+				<div class="fragment fade-in">
+					<blockquote data-id="block" class="formula" style="height: 40px; margin-top: 8%;">
+						Perchè ci interessano le frazioni continue?
+					</blockquote>
+				</div>
+			</section>
+
+			<one-formula></one-formula>
+
+			<!-- Frazioni continue e miglior approssimazioni -->
+			<section id="frazioni-continue-3" data-auto-animate>
+				<div style="margin-top: 20%;">
+					<blockquote data-id="block" class="theorem">
+						<b>Teorema</b>
+						<br><br>
+						<div class="fragment fade-down">
+							$\forall \, x = [a_0, a_1, a_2, ...] \in \mathbb{R} \setminus \mathbb{Q}\, ,
+							\ \forall n \in \mathbb{N} \,$ ,
+						</div>
+						<div class="fragment fade-down">
+							$$ \cfrac{p_n}{q_n} = [a_0,...,a_n]$$
+							è una miglior approssimazione per $x$.
+							<br><br>
+						</div>
+						<div class="number theorem auto"></div>
+					</blockquote>
+				</div>
+			</section>
+
+			<new-chapter></new-chapter>
+			<one-formula></one-formula>
+
+			<!-- La soluzione al problema dell'approssimazione -->
+			<section id="soluzione" data-auto-animate>
+				<h4>3.1 La soluzione</h4>
+				<hr>
+				<p>
+					Applichiamo allora <span class="number theorem tooltip top">(2.1)
+						<span class="tooltiptext top theorem">
+							<a href="#/frazioni-continue-3">
+								$$ \cfrac{p_n}{q_n} = [a_0,...,a_n]
+								\ \text{ è una } \, m.a. \, {per} \ x = [a_0,a_1,...] $$
+							</a>
+						</span>
+					</span>
+					a <span class="number tooltip top">$\cfrac{m}{n} = \log_2 \cfrac{3}{2} \,$
+						<span class="tooltiptext top formula">
+							<a href="#/logaritmo">
+								$$\cfrac{m}{n} = \log_2 \cfrac{3}{2} \, $$
+							</a>
+						</span>
+					</span>
+					e otteniamo
+				</p>
+				<div class="fragment fade-down" data-fragment-index="1">
+					<p>
+						$ \log_2 \cfrac{3}{2} = [0,1,1,2,2,3,1,5,2,23,2,...] $
+					</p>
+				</div>
+				<div class="fragment fade-right" style="margin-top: 3%;" data-fragment-index="2">
+					<p>
+						$ \Longrightarrow \ $
+						<span class="number tooltip top detail">$ \ \cfrac{p_1}{p_1} = $
+							<span class="tooltiptext top detail">
+								$$\cfrac{P_1}{q_1} = 0 + \cfrac{1}{1}$$
+							</span>
+						</span>
+						$\cfrac{1}{1} \,$;
+						<span class="fragment fade-in" data-fragment-index="3">
+							<span class="number tooltip top detail">$ \ \cfrac{p_2}{p_2} = $
+								<span class="tooltiptext top detail">
+									$$\cfrac{P_2}{q_2} = 0 + \cfrac{1}{1 + \cfrac{1}{1}}$$
+								</span>
+							</span>
+							$\cfrac{1}{2} \,$;
+						</span>
+						<span class="fragment fade-in" data-fragment-index="4">
+							<span class="number tooltip top detail">$ \ \cfrac{p_3}{p_3} = $
+								<span class="tooltiptext top detail">
+									$$\cfrac{P_3}{q_3} = 0 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{2}}}$$
+								</span>
+							</span>
+							$\cfrac{3}{5} \,$;
+						</span>
+						<span class="fragment fade-in" data-fragment-index="5">
+							<span class="number tooltip top detail">$ \ \cfrac{p_4}{p_4} = $
+								<span class="tooltiptext top detail">
+									$$\cfrac{P_2}{q_2} = 0 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{2 + \cfrac{1}{2}}}}$$
+								</span>
+							</span>
+							<span class="fragment highlight-blue" data-fragment-index="7">
+								$\cfrac{7}{12}$
+							</span>
+							$ \,$;
+						</span>
+						<span class="fragment fade-in" data-fragment-index="6">
+							<span class="number tooltip top detail">$ \ \cfrac{p_5}{p_5} = $
+								<span class="tooltiptext top detail">
+									$$\cfrac{P_2}{q_2}
+									= 0 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{3}}}}}$$
+								</span>
+							</span>
+							$\cfrac{24}{41} \,$;
+						</span>
+					</p>
+				</div>
+				<div class="fragment fade-in" style="margin-top: 5%;" data-fragment-index="8">
+					<blockquote data-id="block" class="formula" style="width: 50%;">
+						$$ \cfrac{m}{n} \approx \cfrac{7}{12} $$
+						<div class="number formula auto"></div>
+					</blockquote>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;" data-fragment-index="9">
+					<p>
+						$\Longrightarrow \ n = $
+						<bem class="fragment highlight-blue" data-fragment-index="10">12 note</bem>
+						nella scala.
+					</p>
+				</div>
+			</section>
+
+			<one-formula></one-formula>
+
+			<!-- Interpretazione di m -->
+			<section id="soluzione-2" data-auto-animate>
+				<h4>3.1 La soluzione</h4>
+				<hr>
+				<blockquote data-id="block" class="formula" style="width: 50%;">
+					$$ \cfrac{m}{n} \approx \cfrac{7}{12} $$
+					<div class="number formula">(3.1)</div>
+				</blockquote>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						Cosa rappresenta $m$ ?
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 2%;">
+					<p>
+						$ \left( \cfrac{3}{2} \right)^n = \: 2^{\, m} $
+						<span class="fragment fade-in">
+							$ \ \Longrightarrow \ \cfrac{3}{2} = 2^{\, \frac{m}{n}} $
+						</span>
+						<span class="fragment fade-in">
+							$ \ \Longrightarrow \ \cfrac{3}{2} \approx 2^{\, \frac{7}{12}} $
+						</span>
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 4%;">
+					<blockquote class="theorem" style="width: 80%;">
+						<b>Teorema</b>
+						<br><br>
+						La <bem>quinta</bem> vale circa $2^{\, {7 \over 12}} \,$, ovvero<br>
+						la 7$^{\,A}$ nota nella scala corrisponde circa all'intervallo di quinta.
+						<br><br>
+						<div class="number theorem auto"></div>
+					</blockquote>
+				</div>
+			</section>
+
+			<!-- Il temperamento pitagorico -->
+			<section id="temperamento-pitagorico">
+				<h4>3.2 Il temperamento pitagorico</h4>
+				<hr>
+				<br>
+				<p>
+					Il sistema che abbiamo costruito è detto
+				</p>
+				<div class="fragment zoom-in" style="margin-top: 2%;">
+					<h5>
+						<b class="fragment highlight-yellow">
+							TEMPERAMENTO PITAGORICO
+						</b>
+					</h5>
+				</div>
+			</section>
 
 			<!-- Piano Game pt.2 -->
-			<section id="piano-2"></section>
+			<section id="piano-2" data-background-iframe="https://bradwave.github.io/PianoFreq" data-preload
+				class="center">
+			</section>
 
 			<!-- Il problema del temperamento pitagorico -->
-			<section id="problema-pitagorico"></section>
+			<section id="problema-pitagorico">
+				<h4>3.3 Il problema del sistema pitagorico</h4>
+				<hr>
+			</section>
+
+			<new-chapter></new-chapter>
+			<two-formulas></two-formulas>
 
 			<!-- Il temperamento naturale -->
-			<section id="temperamento-naturale"></section>
+			<section id="temperamento-naturale" data-auto-animate>
+				<h4>4.1 Il temperamento naturale</h4>
+				<hr>
+				<p>
+					Si possono definire altri sistemi musicali, ad esempio il
+					<bem class="fragment highlight-yellow">sistema natuale</bem> $\mathbb{S}_E$.
+				</p>
+				<div class="fragment fade-down">
+					<p>
+						Serve tuttavia introdurre nuove regole, oltre a
+						<span class="number def tooltip top">(1.2)
+							<span class="tooltiptext top def">
+								<a href="#/sistema-musicale">
+									$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S} \, , \ k=\pm 1 $$
+								</a>
+							</span>
+						</span> e <span class="number def tooltip top">(1.4)
+							<span class="tooltiptext top def">
+								<a href="#/sistema-musicale-3">
+									$$ f \in \mathbb{S} \ \Longrightarrow \ 3f \in \mathbb{S} $$
+								</a>
+							</span>.
+					</p>
+				</div>
+				<div class="fragment fade-in" style="margin-top: 5%;">
+					<blockquote data-id="block" class="def">
+						$$ f \in \mathbb{S}_E \ \Longrightarrow \ \cfrac{1}{3}f \in \mathbb{S}_E
+						\ \land \ \cfrac{1}{5}f \in \mathbb{S}_E $$
+						<div class="number def auto first"></div>
+					</blockquote>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<blockquote class="def">
+						$$ f \in \mathbb{S}_E \ \Longrightarrow \ 5f \in \mathbb{S}_E
+						\ \land \ 7f \in \mathbb{S}_E $$
+						<div class="number def auto second"></div>
+					</blockquote>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						Con queste proprità riusciamo a costruire una scala di 12 note.<br>
+					</p>
+				</div>
+			</section>
+
+			<one-formula></one-formula>
+
+			<!-- Visualizzazione del temperamento naturale -->
+			<section id="temperamento-naturale-2" data-auto-animate>
+				<div class="r-stack">
+					<blockquote data-id="block" class="theorem">
+						<b>Teorema</b>
+						<br>
+						$$ f \in \mathbb{S}_E \ \Longrightarrow \
+						\begin{cases}
+							\ kf \in \mathbb{S}_E & k =2,3,5,7 \\
+							\ \cfrac{1}{k} f \in \mathbb{S}_E & k=2,3,5
+						\end{cases}
+						$$
+						<div class="number theorem auto"></div>
+					</blockquote>
+					<div>
+
+					</div>
+				</div>	
+			</section>
 
 			<!-- Il problema del temperamento naturale -->
 			<section id="problema-naturale"></section>
@@ -410,7 +860,9 @@
 			<section id="temperamento-equabile"></section>
 
 			<!-- Piano game pt.3 -->
-			<section id="piano-3"></section>
+			<section id="piano-2" data-background-iframe="https://bradwave.github.io/PianoFreq" data-preload
+				class="center">
+			</section>
 
 			<!-- Il contesto storico -->
 			<section id="contesto-storico">

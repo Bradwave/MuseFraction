@@ -14,6 +14,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --blue: #068de9;
   --green: #06e96c;
   --yellow: #fae41f;
+  --transparent: #ffffff64;
   --red: #d61c1c;
 }
 
@@ -151,6 +152,10 @@ body {
   color: #fae41fa8;
 }
 
+.reveal div.number.detail {
+  color: var(--transparent);
+}
+
 .reveal new-chapter {
   visibility: hidden;
   counter-increment: chapter;
@@ -189,6 +194,10 @@ body {
   color: var(--yellow);
 }
 
+.reveal span.number.detail {
+  color: var(--transparent);
+}
+
 .reveal span.number:hover {
   text-shadow: 0px 0px 6px;
   transition: 0.4s;
@@ -214,6 +223,7 @@ body {
 }
 
 .reveal blockquote.formula {
+  width: 80%;
   border-color: var(--blue);
 }
 
@@ -283,11 +293,15 @@ body {
 }
 
 .tooltip .tooltiptext.theorem {
-  border-left: 10px solid #06e96c;
+  border-left: 10px solid var(--green);
 }
 
 .tooltip .tooltiptext.def {
-  border-left: 10px solid #fae41f;
+  border-left: 10px solid var(--yellow);
+}
+
+.tooltip .tooltiptext.detail {
+  border-left: 10px solid var(--transparent);
 }
 
 /* Tooltip arrow */
@@ -643,6 +657,11 @@ body {
   transition: all .5s ease;
 }
 
+.reveal .slides section .fragment.fade-right {
+  transform: translate(-10px, 0);
+  transition: all .6s ease;
+}
+
 .reveal .slides section .fragment.zoom-in {
   transform: scale(.8);
   transition: all .8s ease;
@@ -779,16 +798,25 @@ body {
   transform-origin: bottom center;
 }
 
+.reveal #h-line {
+  width: 800px;
+  height: 1px;
+  border: 0;
+  --color: #ffffff;
+  background-image: linear-gradient( to right, #00000000 0%, var(--color) 20%, var(--color) 80%, #00000000 100%);
+  margin: auto;
+}
+
 /*********************************************
  * POINTS TRANSLATION
  *********************************************/
 
-p.p2, p.p3, p.p4, p.p5, p.p6, p.p7, p.p8, p.p9, p.p10, p.p10 {
+.reveal .slides p.p2, .reveal .slides p.p3, .reveal .slides p.p4, .reveal .slides p.p5, .reveal .slides p.p6, .reveal .slides p.p7, .reveal .slides p.p8, .reveal .slides p.p9, .reveal .slides p.p10, .reveal .slides p.p10 {
   visibility: inherit;
   opacity: 0;
 }
 
-p.p2.visible, p.p3.visible, p.p4.visible, p.p5.visible, p.p6.visible, p.p7.visible, p.p8.visible, p.p9.visible, p.p10.visible, p.p11.visible {
+.reveal .slides p.p2.visible, .reveal .slides p.p3.visible, .reveal .slides p.p4.visible, .reveal .slides p.p5.visible, .reveal .slides p.p6.visible, .reveal .slides p.p7.visible, .reveal .slides p.p8.visible, .reveal .slides p.p9.visible, .reveal .slides p.p10.visible, .reveal .slides p.p11.visible {
   opacity: 1;
   transition: all 1s ease;
 }
