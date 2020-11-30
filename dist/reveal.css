@@ -142,6 +142,16 @@ html.reveal-full-page {
     transform: scale(.7)
 }
 
+.reveal .slides section .fragment.rotate {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal .slides section .fragment.rotate.visible {
+    transform: rotate(61.18deg);
+    transition: all 2s ease;
+}
+
 .reveal .slides section .fragment.zoom-in {
     transform: scale(.1)
 }

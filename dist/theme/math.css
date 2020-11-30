@@ -705,26 +705,30 @@ body {
   --radius: 180px;
 }
 
-.reveal .slides section .fragment.first-step, .reveal .slides section .fragment.second-step, .reveal .slides section .fragment.thid-step, .reveal .slides section .fragment.circle-scale {
+.reveal .slides section .fragment.first-step, .reveal .slides section .fragment.first-step-2, .reveal .slides section .fragment.second-step, .reveal .slides section .fragment.thid-step, .reveal .slides section .fragment.circle-scale {
   opacity: 0;
   visibility: inherit
 }
 
-.reveal .slides section .fragment.first-step.visible, .reveal .slides section .fragment.second-step.visible, .reveal .slides section .fragment.third-step.visible {
+.reveal .slides section .fragment.first-step.visible, .reveal .slides section .fragment.first-step-2.visible, .reveal .slides section .fragment.second-step.visible, .reveal .slides section .fragment.third-step.visible {
   opacity: 1;
   transition: all 2s ease;
 }
 
 .reveal .slides section .fragment.first-step.visible {
-  transform: translate(0px, calc(var(--radius)*2));
+  transform: translate(calc(var(--radius)*(-0.509)), calc(var(--radius)*(1.861)));
+}
+
+.reveal .slides section .fragment.first-step-2.visible {
+  transform: translate(calc(var(--radius)*(-0.509)), calc(var(--radius)*(1.861)));
 }
 
 .reveal .slides section .fragment.second-step.visible {
-  transform: translate(calc(var(--radius)*0.778), calc(var(--radius)*(-1.778)));
+  transform: translate(calc(var(--radius)*(1.473)), calc(var(--radius)*(-1.391)));
 }
 
 .reveal .slides section .fragment.third-step.visible {
-  transform: translate(calc(var(--radius)*(-1.794)), calc(var(--radius)*(1.199)));
+  transform: translate(calc(var(--radius)*(-2.063)), calc(var(--radius)*(0.497)));
 }
 
 .reveal .slides section .fragment.circle-scale.visible {
@@ -790,12 +794,19 @@ body {
   text-shadow: 0px 0px 8px #000000a1;
 }
 
-.reveal #line {
+.reveal #line, .reveal #r-line {
   width: 1px;
-  height: calc(var(--radius)*1.9);
   background: #969696;
   transform: translate(0px, calc(var(--radius)*(-0.95))) rotate(var(--angle));
   transform-origin: bottom center;
+}
+
+.reveal #line {
+  height: calc(var(--radius)*1.9);
+}
+
+.reveal #r-line {
+  height: var(--radius);
 }
 
 .reveal #h-line {
@@ -822,81 +833,81 @@ body {
 }
 
 .reveal .slides p.p2 {
-  transform: translate(calc(var(--radius)*0.778), calc(var(--radius)*(-0.778)));
+  transform: translate(calc(var(--radius)*(0.964)), calc(var(--radius)*(-0.530)));
 }
 
 .reveal .slides p.p2.visible {
-  transform: translate(calc(var(--radius)*0.707), calc(var(--radius)*(-0.707)));
+  transform: translate(calc(var(--radius)*(0.876)), calc(var(--radius)*(-0.482)));
 }
 
 .reveal .slides p.p3 {
-  transform: translate(calc(var(--radius)*(-1.016)), calc(var(--radius)*0.421));
+  transform: translate(calc(var(--radius)*(-1.099)), calc(var(--radius)*(-0.034)));
 }
 
 .reveal .slides p.p3.visible {
-  transform: translate(calc(var(--radius)*(-0.924)), calc(var(--radius)*0.383));
+  transform: translate(calc(var(--radius)*(-1.000)), calc(var(--radius)*(-0.031)));
 }
 
 .reveal .slides p.p4 {
-  transform: translate(calc(var(--radius)*1.194), calc(var(--radius)*0.118));
+  transform: translate(calc(var(--radius)*(1.014)), calc(var(--radius)*(0.642)));
 }
 
 .reveal .slides p.p4.visible {
-  transform: translate(calc(var(--radius)*0.995), calc(var(--radius)*0.098));
+  transform: translate(calc(var(--radius)*(0.845)), calc(var(--radius)*(0.535)));
 }
 
 .reveal .slides p.p5 {
-  transform: translate(calc(var(--radius)*(-0.715)), calc(var(--radius)*(-0.964)));
+  transform: translate(calc(var(--radius)*(-0.546)), calc(var(--radius)*(-1.069)));
 }
 
 .reveal .slides p.p5.visible {
-  transform: translate(calc(var(--radius)*(-0.596)), calc(var(--radius)*(-0.803)));
+  transform: translate(calc(var(--radius)*(-0.455)), calc(var(--radius)*(-0.89)));
 }
 
 .reveal .slides p.p6 {
-  transform: translate(calc(var(--radius)*0.599), calc(var(--radius)*1.154));
+  transform: translate(calc(var(--radius)*(-0.080)), calc(var(--radius)*(1.298)));
 }
 
 .reveal .slides p.p6.visible {
-  transform: translate(calc(var(--radius)*0.461), calc(var(--radius)*0.888));
+  transform: translate(calc(var(--radius)*(-0.061)), calc(var(--radius)*(0.998)));
 }
 
 .reveal .slides p.p7 {
-  transform: translate(calc(var(--radius)*0.579), calc(var(--radius)*(-1.275)));
+  transform: translate(calc(var(--radius)*(0.785)), calc(var(--radius)*(-1.159)));
 }
 
 .reveal .slides p.p7.visible {
-  transform: translate(calc(var(--radius)*0.414), calc(var(--radius)*(-0.91)));
+  transform: translate(calc(var(--radius)*(0.561)), calc(var(--radius)*(-0.828)));
 }
 
 .reveal .slides p.p8 {
-  transform: translate(calc(var(--radius)*(-0.836)), calc(var(--radius)*1.123));
+  transform: translate(calc(var(--radius)*(-1.266)), calc(var(--radius)*(0.598)));
 }
 
 .reveal .slides p.p8.visible {
-  transform: translate(calc(var(--radius)*(-0.597)), calc(var(--radius)*0.802));
+  transform: translate(calc(var(--radius)*(-0.904)), calc(var(--radius)*(0.427)));
 }
 
 .reveal .slides p.p9 {
-  transform: translate(calc(var(--radius)*1.43), calc(var(--radius)*(-0.451)))
+  transform: translate(calc(var(--radius)*(1.494)), calc(var(--radius)*(0.138)));
 }
 
 .reveal .slides p.p9.visible {
-  transform: translate(calc(var(--radius)*0.954), calc(var(--radius)*(-0.301)));
+  transform: translate(calc(var(--radius)*(0.996)), calc(var(--radius)*(0.092)));
 }
 
 .reveal .slides p.p10 {
-  transform: translate(calc(var(--radius)*(-1.421)), calc(var(--radius)*(-0.482)));
+  transform: translate(calc(var(--radius)*(-1.216)), calc(var(--radius)*(-0.879)));
 }
 
 .reveal .slides p.p10.visible {
-  transform: translate(calc(var(--radius)*(-0.947)), calc(var(--radius)*(-0.321)));
+  transform: translate(calc(var(--radius)*(-0.810)), calc(var(--radius)*(-0.586)));
 }
 
 .reveal .slides p.p11 {
-  transform: translate(calc(var(--radius)*1.285), calc(var(--radius)*0.953));
+  transform: translate(calc(var(--radius)*(0.639)), calc(var(--radius)*(1.467)));
 }
 
 .reveal .slides p.p11.visible {
-  transform: translate(calc(var(--radius)*0.803), calc(var(--radius)*0.596));
+  transform: translate(calc(var(--radius)*(0.400)), calc(var(--radius)*(0.917)));
 }
