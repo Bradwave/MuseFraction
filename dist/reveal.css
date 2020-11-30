@@ -170,6 +170,18 @@ html.reveal-full-page {
     visibility: inherit
 }
 
+.reveal .slides section .fragment.zoom-fade-out {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal .slides section .fragment.zoom-fade-out.visible {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.6);
+    transition: all 1s ease;
+}
+
 .reveal .slides section .fragment.strike {
     opacity: 1;
     visibility: inherit

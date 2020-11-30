@@ -9,6 +9,14 @@ section.has-light-background, section.has-light-background h1, section.has-light
   color: rgb(0, 0, 0);
 }
 
+:root {
+  --radius: 180px;
+  --blue: #068de9;
+  --green: #06e96c;
+  --yellow: #fae41f;
+  --red: #d61c1c;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -170,15 +178,15 @@ body {
 }
 
 .reveal span.number.formula {
-  color: #068de9;
+  color: var(--blue);
 }
 
 .reveal span.number.theorem {
-  color: #06e96cda;
+  color: var(--green);
 }
 
 .reveal span.number.def {
-  color: #fae41f;
+  color: var(--yellow);
 }
 
 .reveal span.number:hover {
@@ -206,17 +214,17 @@ body {
 }
 
 .reveal blockquote.formula {
-  border-color: #068de9;
+  border-color: var(--blue);
 }
 
 .reveal blockquote.theorem {
   width: 60%;
-  border-color: #06e96c;
+  border-color: var(--green);
 }
 
 .reveal blockquote.def {
   width: 60%;
-  border-color: #fae41f;
+  border-color: var(--yellow);
 }
 
 .reveal blockquote p:first-child, .reveal blockquote p:last-child {
@@ -271,7 +279,7 @@ body {
 }
 
 .tooltip .tooltiptext.formula {
-  border-left: 10px solid #068de9;
+  border-left: 10px solid var(--blue);
 }
 
 .tooltip .tooltiptext.theorem {
@@ -550,12 +558,12 @@ body {
 }
 
 .reveal button.link:hover a {
-  color: #068de9;
+  color: var(--blue);
   text-shadow: none;
 }
 
 .reveal button.link:active a {
-  text-shadow: 0 0 10px #068de9;
+  text-shadow: 0 0 10px var(--blue);
 }
 
 /*********************************************
@@ -675,7 +683,7 @@ body {
  *********************************************/
 
 :root {
-  --radius: 150px
+  --radius: 180px;
 }
 
 .reveal .slides section .fragment.first-step, .reveal .slides section .fragment.second-step, .reveal .slides section .fragment.thid-step, .reveal .slides section .fragment.circle-scale {
@@ -730,18 +738,37 @@ body {
   margin: auto;
 }
 
+.reveal #point, #selected-point {
+  border-radius: 50%;
+  margin: auto;
+}
+
 .reveal #point {
   width: 10px;
   height: 10px;
   background: #ffffff;
+  box-shadow: 0px 0px 8px #000000a1;
+}
+
+.reveal #selected-point {
+  width: 11px;
+  height: 11px;
+  background: #068de9;
+  box-shadow: 0px 0px 6px #068ee996;
+}
+
+.reveal #animated-point {
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  box-shadow: 0px 0px 8px #000000a1;
   border-radius: 50%;
-  box-shadow: 0px 0px 8px #000000;
   margin: auto;
 }
 
 .reveal #f-label {
   line-height: 220%;
-  text-shadow: 0px 0px 8px #000000;
+  text-shadow: 0px 0px 8px #000000a1;
 }
 
 .reveal #line {
@@ -750,4 +777,98 @@ body {
   background: #969696;
   transform: translate(0px, calc(var(--radius)*(-0.95))) rotate(var(--angle));
   transform-origin: bottom center;
+}
+
+/*********************************************
+ * POINTS TRANSLATION
+ *********************************************/
+
+p.p2, p.p3, p.p4, p.p5, p.p6, p.p7, p.p8, p.p9, p.p10, p.p10 {
+  visibility: inherit;
+  opacity: 0;
+}
+
+p.p2.visible, p.p3.visible, p.p4.visible, p.p5.visible, p.p6.visible, p.p7.visible, p.p8.visible, p.p9.visible, p.p10.visible, p.p11.visible {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.reveal .slides p.p2 {
+  transform: translate(calc(var(--radius)*0.778), calc(var(--radius)*(-0.778)));
+}
+
+.reveal .slides p.p2.visible {
+  transform: translate(calc(var(--radius)*0.707), calc(var(--radius)*(-0.707)));
+}
+
+.reveal .slides p.p3 {
+  transform: translate(calc(var(--radius)*(-1.016)), calc(var(--radius)*0.421));
+}
+
+.reveal .slides p.p3.visible {
+  transform: translate(calc(var(--radius)*(-0.924)), calc(var(--radius)*0.383));
+}
+
+.reveal .slides p.p4 {
+  transform: translate(calc(var(--radius)*1.194), calc(var(--radius)*0.118));
+}
+
+.reveal .slides p.p4.visible {
+  transform: translate(calc(var(--radius)*0.995), calc(var(--radius)*0.098));
+}
+
+.reveal .slides p.p5 {
+  transform: translate(calc(var(--radius)*(-0.715)), calc(var(--radius)*(-0.964)));
+}
+
+.reveal .slides p.p5.visible {
+  transform: translate(calc(var(--radius)*(-0.596)), calc(var(--radius)*(-0.803)));
+}
+
+.reveal .slides p.p6 {
+  transform: translate(calc(var(--radius)*0.599), calc(var(--radius)*1.154));
+}
+
+.reveal .slides p.p6.visible {
+  transform: translate(calc(var(--radius)*0.461), calc(var(--radius)*0.888));
+}
+
+.reveal .slides p.p7 {
+  transform: translate(calc(var(--radius)*0.579), calc(var(--radius)*(-1.275)));
+}
+
+.reveal .slides p.p7.visible {
+  transform: translate(calc(var(--radius)*0.414), calc(var(--radius)*(-0.91)));
+}
+
+.reveal .slides p.p8 {
+  transform: translate(calc(var(--radius)*(-0.836)), calc(var(--radius)*1.123));
+}
+
+.reveal .slides p.p8.visible {
+  transform: translate(calc(var(--radius)*(-0.597)), calc(var(--radius)*0.802));
+}
+
+.reveal .slides p.p9 {
+  transform: translate(calc(var(--radius)*1.43), calc(var(--radius)*(-0.451)))
+}
+
+.reveal .slides p.p9.visible {
+  transform: translate(calc(var(--radius)*0.954), calc(var(--radius)*(-0.301)));
+}
+
+.reveal .slides p.p10 {
+  transform: translate(calc(var(--radius)*(-1.421)), calc(var(--radius)*(-0.482)));
+}
+
+.reveal .slides p.p10.visible {
+  transform: translate(calc(var(--radius)*(-0.947)), calc(var(--radius)*(-0.321)));
+}
+
+.reveal .slides p.p11 {
+  transform: translate(calc(var(--radius)*1.285), calc(var(--radius)*0.953));
+}
+
+.reveal .slides p.p11.visible {
+  transform: translate(calc(var(--radius)*0.803), calc(var(--radius)*0.596));
 }

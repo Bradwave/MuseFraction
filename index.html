@@ -61,7 +61,7 @@
 
 			<!-- Piano game pt.1 -->
 			<section data-background-iframe="https://bradwave.github.io/PianoFreq" data-preload class="center"
-				id="conosciamoci">
+				id="piano-1">
 			</section>
 
 			<new-chapter></new-chapter>
@@ -201,7 +201,7 @@
 				</blockquote>
 			</section>
 
-			<!-- Intervali -->
+			<!-- Reiterazione della quinta -->
 			<section data-auto-animate id="sistema-musicale-4">
 				<h4>1.5 Reiterare la quinta</h4>
 				<hr>
@@ -234,26 +234,38 @@
 				</div>
 			</section>
 
-			<section class="center">
-				<div class="r-stack fragment fade-in" data-fragment-index="1" style="margin: auto">
+			<!-- Animazione temperamento pitagorico -->
+			<section id="animazione-sistema">
+				<div class="r-stack fragment fade-in" data-fragment-index="1" style="margin-top: 17%;">
 					<p id="circle"></p>
-					<p id="circle" class="fragment circle-scale" style="--scale: 1.1;" data-fragment-index="4">
+					<div class="r-stack fragment zoom-fade-out" data-fragment-index="16">
+						<p id="circle" class="fragment circle-scale" style="--scale: 1.09;" data-fragment-index="4">
 
-					</p>
-					<p id="circle" class="fragment circle-scale" style="--scale: 1.2;" data-fragment-index="5">
-					</p>
-					<div class="r-stack fragment zoom-in" data-fragment-index="6">
-						<p id="circle" style="transform: scale(1.3);"></p>
-						<p id="circle" style="transform: scale(1.4);"></p>
-						<p id="circle" style="transform: scale(1.5);"></p>
-						<p id="circle" style="transform: scale(1.6);"></p>
-						<p id="circle" style="transform: scale(1.69);"></p>
-						<p id="circle" style="transform: scale(1.78);"></p>
+						</p>
+						<p id="circle" class="fragment circle-scale" style="--scale: 1.19;" data-fragment-index="5">
+						</p>
+						<div class="r-stack fragment zoom-in" data-fragment-index="6">
+							<p id="circle" style="transform: scale(1.29);"></p>
+							<p id="circle" style="transform: scale(1.39);"></p>
+							<p id="circle" style="transform: scale(1.49);"></p>
+							<p id="circle" style="transform: scale(1.59);"></p>
+							<p id="circle" style="transform: scale(1.69);"></p>
+							<p id="circle" style="transform: scale(1.79);"></p>
+						</div>
 					</div>
 					<div class="r-stack points fragment zoom-in" data-fragment-index="10">
-						<p id="line" style="--angle: 0deg;"></p>
-						<p id="line" style="--angle: 45deg;"></p>
-						<p id="line" style="--angle: 180deg;"></p>
+						<div class="r-stack fragment zoom-fade-out" data-fragment-index="15">
+							<p id="line" style="--angle: 0deg;"></p>
+							<p id="line" style="--angle: 45deg;"></p>
+							<p id="line" style="--angle: 180deg;"></p>
+						</div>
+					</div>
+					<div class="r-stack points fragment zoom-in" data-fragment-index="11">
+						<div class="r-stack fragment zoom-fade-out" data-fragment-index="15">
+							<p id="line" style="--angle: 4.926deg; background: #575757;"></p>
+							<p id="line" style="--angle: 187.3675deg; background: #575757;"></p>
+							<p id="line" style="--angle: 50.5246deg; background: #575757;"></p>
+						</div>
 					</div>
 					<div class="points fragment fade-in" data-fragment-index="2">
 						<div class="r-stack">
@@ -265,56 +277,140 @@
 									<span id="f-label">$\ \frac{3}{2}f$</span>
 								</p>
 								<div class="r-stack fragment second-step" data-fragment-index="7">
-									<p id="point">
-										<span id="f-label">$\ \frac{9}{4}f$</span>
-									</p>
-									<p id="point" class="fragment third-step" data-fragment-index="8">
-										<span id="f-label">$\ \frac{27}{8}f$</span>
-									</p>
+									<div class="r-stack fragment fade-out" data-fragment-index="16">
+										<p id="point">
+											<span id="f-label">$\ \frac{9}{4}f$</span>
+										</p>
+										<p id="point" class="fragment third-step" data-fragment-index="8">
+											<span id="f-label">$\ \frac{27}{8}f$</span>
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="r-stack fragment zoom-in" data-fragment-index="9">
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*1.194), calc(var(--radius)*0.118));">
+						<div class="r-stack fragment fade-out" data-fragment-index="16">
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*1.194), calc(var(--radius)*0.118));"></p>
+							<p id="point" data-id="p5"
+								style="transform: translate(calc(var(--radius)*(-0.715)), calc(var(--radius)*(-0.964)));">
+							</p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*0.599), calc(var(--radius)*1.154));"></p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*0.579), calc(var(--radius)*(-1.275)));">
+							</p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*(-0.836)), calc(var(--radius)*1.123));">
+							</p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*1.43), calc(var(--radius)*(-0.451)));">
+							</p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*(-1.421)), calc(var(--radius)*-0.482));">
+							</p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*1.285), calc(var(--radius)*0.953));"></p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*0.146), calc(var(--radius)*(-1.694)));">
+							</p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*(-0.218)), calc(var(--radius)*1.686));">
+							</p>
+							<p id="point"
+								style="transform: translate(calc(var(--radius)*1.389), calc(var(--radius)*(-1.144)));">
+							</p>
+						</div>
+					</div>
+					<div class="r-stack fragment fade-in-then-out" data-fragment-index="12">
+						<p id="selected-point" style="transform: translate(0px, calc(var(--radius)*(-1)));">
 						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*(-0.715)), calc(var(--radius)*(-0.964)));">
+						<p id="selected-point"
+							style="background: var(--blue); transform: translate(calc(var(--radius)*0.146), calc(var(--radius)*(-1.694)));">
 						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*0.599), calc(var(--radius)*1.154));">
+					</div>
+					<div class="r-stack fragment fade-in-then-out" data-fragment-index="13">
+						<p id="selected-point" style="transform: translate(0px, calc(var(--radius)*1));">
 						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*0.579), calc(var(--radius)*(-1.275)));">
-						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*(-0.836)), calc(var(--radius)*1.123));">
-						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*1.43), calc(var(--radius)*0.451));">
-						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*(-1.421)), calc(var(--radius)*-0.482));">
-						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*1.285), calc(var(--radius)*0.953));">
-						</p>
-						<p id="point"
-							style="transform: translate(calc(var(--radius)*0.146), calc(var(--radius)*(-1.694)));">
-						</p>
-						<p id="point"
+						<p id="selected-point"
 							style="transform: translate(calc(var(--radius)*(-0.218)), calc(var(--radius)*1.686));">
 						</p>
-						<p id="point"
+					</div>
+					<div class="r-stack fragment fade-in-then-out" data-fragment-index="14">
+						<p id="selected-point"
+							style="transform: translate(calc(var(--radius)*0.778), calc(var(--radius)*(-0.778)));">
+						</p>
+						<p id="selected-point"
 							style="transform: translate(calc(var(--radius)*1.389), calc(var(--radius)*(-1.144)));">
 						</p>
 					</div>
-				</div>
-				<div>
-
+					<div class="r-stack">
+						<p id="animated-point" class="fragment p2" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p3" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p4" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p5" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p6" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p7" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p8" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p9" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p10" data-fragment-index="16"></p>
+						<p id="animated-point" class="fragment p11" data-fragment-index="16"></p>
+					</div>
+					<div class="fragment zoom-in">
+						<p>
+							Per quali $n,m \in \mathbb{N}$<br><br>
+							<span class="number tooltip top">$ \left( \cfrac{3}{2} \right)^n $
+								<span class="tooltiptext top theorem">
+									<a href="#/sistema-musicale-4">
+										$$ f \in \mathbb{S} \ \Longrightarrow \ \left( \dfrac{3}{2} \right)^n f \in
+										\mathbb{S} \, , \ \forall n \in \mathbb{N}$$
+									</a>
+								</span>
+							</span>
+							$ \approx $
+							<span class="number tooltip top">$ \: 2^{\, m} $
+								<span class="tooltiptext top theorem">
+									<a href="#/sistema-musicale-2">
+										$$ f \in \mathbb{S} \ \Longrightarrow \ 2^nf \in \mathbb{S} \, , \ \forall n \in
+										\mathbb{Z} \, $$
+									</a>
+								</span>
+							</span> ?
+						</p>
+					</div>
 				</div>
 			</section>
+
+			<!-- Il calcolo del logaritmo -->
+			<section id="logaritmo"></section>
+
+			<!-- La migliore approssimazione -->
+			<section id="migliore-approssimazione"></section>
+
+			<!-- Le frazione continue -->
+			<section id="frazione-continue"></section>
+
+			<!-- La soluzione al temperamento pitagorico -->
+			<section id="temperamento-pitagorico"></section>
+
+			<!-- Piano Game pt.2 -->
+			<section id="piano-2"></section>
+
+			<!-- Il problema del temperamento pitagorico -->
+			<section id="problema-pitagorico"></section>
+
+			<!-- Il temperamento naturale -->
+			<section id="temperamento-naturale"></section>
+
+			<!-- Il problema del temperamento naturale -->
+			<section id="problema-naturale"></section>
+
+			<!-- Il temperamento equabile -->
+			<section id="temperamento-equabile"></section>
+
+			<!-- Piano game pt.3 -->
+			<section id="piano-3"></section>
 
 			<!-- Il contesto storico -->
 			<section id="contesto-storico">
@@ -366,8 +462,6 @@
 				// Multiplex
 				{ src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
 				{ src: 'https://reveal-multiplex.glitch.me/client.js', async: true },
-				// Other plugins
-				{ src: 'node_modules/revealjs-animated/dist/revealjs-animated.js', async: true }
 			]
 		});
 	</script>
