@@ -1,0 +1,72 @@
+:root {
+    --size: 8vh;
+}
+
+.button {
+    width: var(--size);
+    height: var(--size);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: calc(var(--size)*0.5);
+    background-color: #41414198;
+    color: white;
+    padding: 0%;
+    border: none;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+.button:hover {
+    background-color: #63636398;
+    transition: all .6s ease;
+}
+
+.button:active {
+    text-shadow: 0 0 12px #ffffff;
+    background-color: #a8a8a8;
+    box-shadow: 0 0 8px #c9c9c9;
+    transition: all .05s ease;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:disabled {
+    cursor: default;
+    background-color: #3131314b;
+}
+
+.button-label {
+    margin: auto;
+    padding: 0%;
+    transform: translate(0, calc(var(--size)*(-0.02)));
+    font-size: calc(var(--size)*0.6);
+}
+
+.s-label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin: auto;
+    padding: 0%;
+    transform: translate(0, calc(var(--size)*(-0.02)));
+    font-size: calc(var(--size)*0.5);
+    border: none;
+}
+
+.d-label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: #ffffff62;
+    margin: auto;
+    padding: 0%;
+    transform: translate(0, calc(var(--size)*(-0.02)));
+    font-size: calc(var(--size)*0.5);
+    border: none;
+}
+
+sub {
+    font-size: 60%;
+}

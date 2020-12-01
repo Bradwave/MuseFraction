@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Frequency Keyboard</title>
+
+    <link rel="icon" type="image/png" href="imgs/icon.png" />
+
+    <link rel="stylesheet" href="css/piano.css" id="theme">
+
+    <!-- script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js"></script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.68/Tone.js"></script>
+
+    <script src="js/utils/pianoKey.js"></script>
+    <script src="js/utils/coordinateSystem.js"></script>
+    <script src="js/pianoFreq.js"></script>
+    <script src="js/utils/autoplay.js"></script>
+    <script src="js/utils/temperament.js"></script>
+</head>
+
+<body style="display: block; padding: 0; margin: 0; overflow: hidden; text-align: center;">
+
+    <button class="button" type="buttuon" id="autoPlay" onClick="toggleAutoPlay()">
+        <p class="button-label" id="autoLabel">
+            &#10239
+        </p>
+    </button>
+
+    <button class="button" type="buttuon" id="pithagorean" onClick="pithagoreanTemperament()">
+        <p class="s-label">
+            &#x1D54A<sub>P</sub>
+        </p>
+    </button>
+
+    <button class="button" type="buttuon" id="natural" onClick="naturalTemperament()" disabled>
+        <p class="d-label">
+            &#x1D54A<sub>N</sub>
+        </p>
+    </button>
+
+    <button class="button" type="buttuon" id="equal" onClick="equalTemperament()" disabled>
+        <p class="d-label">
+            &#x1D54A<sub>E</sub>
+        </p>
+    </button>
+
+    <button class="button" type="buttuon" id="random" onClick="randomTemperament()">
+        <p class="s-label" style="transform: translate(-2px,0);">
+            &#x2943
+        </p>
+    </button>
+
+</body>
+
+</html>
