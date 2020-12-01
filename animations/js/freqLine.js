@@ -30,7 +30,7 @@ function windowResized() {
 function touchStarted() {
   let freq = toCartesianX(mouseX)
   if ((freq - 0.9) * (freq - 2.1) < 0) {
-    frequencies.push(new Note(freq));
+    frequencies.push(new Note(freq, true));
     playFrequncy(freq, 0);
   }
 }

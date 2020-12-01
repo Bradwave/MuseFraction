@@ -61,13 +61,13 @@ function windowResized() {
 }
 
 function updateButtons() {
-  // let bOffset = autoPlayPause.elt.offsetWidth * 1.2;
+  let sOffset = autoPlayPause.elt.offsetWidth / 2;
   let bOffset = height * 0.1;
-  autoPlayPause.position(width / 2 - bOffset * 2.4, height * 0.1);
-  rSystem.position(width / 2 - bOffset * 1, height * 0.1);
-  pSystem.position(width / 2, height * 0.1);
-  nSystem.position(width / 2 + bOffset * 1, height * 0.1);
-  eSystem.position(width / 2 + bOffset * 2, height * 0.1);
+  autoPlayPause.position(width / 2 - bOffset * 2.4 - sOffset, height * 0.1);
+  rSystem.position(width / 2 - bOffset * 1 - sOffset, height * 0.1);
+  pSystem.position(width / 2 - sOffset, height * 0.1);
+  nSystem.position(width / 2 + bOffset * 1 - sOffset, height * 0.1);
+  eSystem.position(width / 2 + bOffset * 2 - sOffset, height * 0.1);
 }
 
 function touchStarted() {

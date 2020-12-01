@@ -60,7 +60,7 @@ class Note {
 
 }
 
-class PianoKey extends Note {
+class PianoKey {
 
     /**
      * Creates a key, given the (x,y) Cartesian coordinates and the key type.
@@ -72,9 +72,6 @@ class PianoKey extends Note {
         // Position (Cartesian coordinate system)
         this.x = x;
         this.y = y;
-
-        // Superclass
-        super(x, false);
 
         // Flat or Sharp
         this.flat = flat;
@@ -100,6 +97,13 @@ class PianoKey extends Note {
     selectImg() {
         this.img = Math.random() > 0.5 ?
             (this.flat ? flat1 : sharp1) : (this.flat ? flat2 : sharp2);
+    }
+
+    /**
+     * Gets the frequency of the key.
+     */
+    getFrequency() {
+        return this.x;
     }
 
     /**
@@ -201,6 +205,42 @@ class PianoKey extends Note {
 
         return (x - p.x + this.width * 0.5 - 3) * (x - p.x - this.width * 0.5 + 3) < 0
             && (y - p.y - 3) * (y - p.y - this.height + 3) < 0;
+    }
+
+    /**
+     * Plays the key.
+     */
+    play() {
+        this.t = this.DURATION;
+    }
+
+    /**
+     * Returns true if the key is currently played, false otherwise.
+     */
+    played() {
+        return this.t > 0;
+    }
+
+    /**
+     * Returns the fading state as a number between 0 and 1.
+     */
+    getFade() {
+        return (1 - this.t / this.DURATION);
+    }
+
+    /**
+     * Returns the visual amplitude of the note
+     * according to the current fade state.
+     */
+    getAmp() {
+        return 2 * Math.sin(PI * this.getFade()) / TWO_PI
+    }
+
+    /**
+     * Makes the note fade.
+     */
+    fade() {
+        this.t--;
     }
 
 }
