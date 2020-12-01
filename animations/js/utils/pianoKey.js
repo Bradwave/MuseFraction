@@ -1,4 +1,66 @@
-class PianoKey {
+class Note {
+
+    /**
+     * Creates a note with a certain frequncy.
+     * @param {Number} freq Frequency of the note.
+     */
+    constructor(freq, play = true) {
+        // Frequency
+        this.freq = freq;
+
+        // Wave timer
+        this.DURATION = 15;
+        this.t = 0;
+
+        if (play) this.play();
+    }
+
+    /**
+     * Returns the frequecy of the note.
+     */
+    getFrequency() {
+        return this.freq;
+    }
+
+    /**
+     * Plays the note.
+     */
+    play() {
+        this.t = this.DURATION;
+    }
+
+    /**
+     * Returns true if the note is currently played, false otherwise.
+     */
+    played() {
+        return this.t > 0;
+    }
+
+    /**
+     * Returns the fading state as a number between 0 and 1.
+     */
+    getFade() {
+        return (1 - this.t / this.DURATION);
+    }
+
+    /**
+     * Returns the visual amplitude of the note
+     * according to the current fade state.
+     */
+    getAmp() {
+        return 2 * Math.sin(PI * this.getFade()) / TWO_PI
+    }
+
+    /**
+     * Makes the note fade.
+     */
+    fade() {
+        this.t--;
+    }
+
+}
+
+class PianoKey extends Note {
 
     /**
      * Creates a key, given the (x,y) Cartesian coordinates and the key type.
@@ -10,6 +72,9 @@ class PianoKey {
         // Position (Cartesian coordinate system)
         this.x = x;
         this.y = y;
+
+        // Superclass
+        super(x, false);
 
         // Flat or Sharp
         this.flat = flat;
@@ -35,13 +100,6 @@ class PianoKey {
     selectImg() {
         this.img = Math.random() > 0.5 ?
             (this.flat ? flat1 : sharp1) : (this.flat ? flat2 : sharp2);
-    }
-
-    /**
-     * Gets the frequency of the key.
-     */
-    getFrequency() {
-        return this.x;
     }
 
     /**
@@ -143,42 +201,6 @@ class PianoKey {
 
         return (x - p.x + this.width * 0.5 - 3) * (x - p.x - this.width * 0.5 + 3) < 0
             && (y - p.y - 3) * (y - p.y - this.height + 3) < 0;
-    }
-
-    /**
-     * Plays the key.
-     */
-    play() {
-        this.t = this.DURATION;
-    }
-
-    /**
-     * Returns true if the key is currently played, false otherwise.
-     */
-    played() {
-        return this.t > 0;
-    }
-
-    /**
-     * Returns the fading state as a number between 0 and 1.
-     */
-    getFade() {
-        return (1 - this.t / this.DURATION);
-    }
-
-    /**
-     * Returns the visual amplitude of the note
-     * according to the current fade state.
-     */
-    getAmp() {
-        return 2 * Math.sin(PI * this.getFade()) / TWO_PI
-    }
-
-    /**
-     * Makes the note fade.
-     */
-    fade() {
-        this.t--;
     }
 
 }
