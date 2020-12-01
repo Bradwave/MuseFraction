@@ -822,12 +822,12 @@ body {
  * POINTS TRANSLATION
  *********************************************/
 
-.reveal .slides p.p2, .reveal .slides p.p3, .reveal .slides p.p4, .reveal .slides p.p5, .reveal .slides p.p6, .reveal .slides p.p7, .reveal .slides p.p8, .reveal .slides p.p9, .reveal .slides p.p10, .reveal .slides p.p10 {
+.reveal .slides p.p2, .reveal .slides p.p3, .reveal .slides p.p4, .reveal .slides p.p5, .reveal .slides p.p6, .reveal .slides p.p7, .reveal .slides p.p8, .reveal .slides p.p9, .reveal .slides p.p10, .reveal .slides p.p12, .reveal .slides p.p13, .reveal .slides p.p14 {
   visibility: inherit;
   opacity: 0;
 }
 
-.reveal .slides p.p2.visible, .reveal .slides p.p3.visible, .reveal .slides p.p4.visible, .reveal .slides p.p5.visible, .reveal .slides p.p6.visible, .reveal .slides p.p7.visible, .reveal .slides p.p8.visible, .reveal .slides p.p9.visible, .reveal .slides p.p10.visible, .reveal .slides p.p11.visible {
+.reveal .slides p.p2.visible, .reveal .slides p.p3.visible, .reveal .slides p.p4.visible, .reveal .slides p.p5.visible, .reveal .slides p.p6.visible, .reveal .slides p.p7.visible, .reveal .slides p.p8.visible, .reveal .slides p.p9.visible, .reveal .slides p.p10.visible, .reveal .slides p.p11.visible, .reveal .slides p.p12.visible, .reveal .slides p.p13.visible, .reveal .slides p.p14.visible {
   opacity: 1;
   transition: all 1s ease;
 }
@@ -910,4 +910,28 @@ body {
 
 .reveal .slides p.p11.visible {
   transform: translate(calc(var(--radius)*(0.400)), calc(var(--radius)*(0.917)));
+}
+
+.reveal .slides p.p12 {
+  transform: translate(calc(var(--radius)*(0.208)), calc(var(--radius)*(-1.687)));
+}
+
+.reveal .slides p.p12.visible {
+  transform: translate(calc(var(--radius)*(0.123)), calc(var(--radius)*(-0.992)));
+}
+
+.reveal .slides p.p13 {
+  transform: translate(calc(var(--radius)*(-1.038)), calc(var(--radius)*(1.346)));
+}
+
+.reveal .slides p.p13.visible {
+  transform: translate(calc(var(--radius)*(-0.610)), calc(var(--radius)*(0.792)));
+}
+
+.reveal .slides p.p14 {
+  transform: translate(calc(var(--radius)*(1.671)), calc(var(--radius)*(-0.668)));
+}
+
+.reveal .slides p.p14.visible {
+  transform: translate(calc(var(--radius)*(0.929)), calc(var(--radius)*(-0.371)));
 }

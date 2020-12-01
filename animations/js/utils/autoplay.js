@@ -34,6 +34,7 @@ function autoPlay() {
         }
         if (songIndex == odeOfJoy.length) {
             autoPlaying = false;
+            autoLabel.html('&#10239');
         }
     }
 }

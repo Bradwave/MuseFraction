@@ -142,13 +142,23 @@ html.reveal-full-page {
     transform: scale(.7)
 }
 
-.reveal .slides section .fragment.rotate {
+.reveal .slides section .fragment.rotate-n {
     opacity: 1;
     visibility: inherit
 }
 
-.reveal .slides section .fragment.rotate.visible {
+.reveal .slides section .fragment.rotate-n.visible {
     transform: rotate(61.18deg);
+    transition: all 2s ease;
+}
+
+.reveal .slides section .fragment.rotate-e {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal .slides section .fragment.rotate-e.visible {
+    transform: rotate(60deg);
     transition: all 2s ease;
 }
 
@@ -189,6 +199,18 @@ html.reveal-full-page {
     opacity: 0;
     visibility: hidden;
     transform: scale(0.6);
+    transition: all 1s ease;
+}
+
+.reveal .slides section .fragment.zoom-fade-out-soft {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal .slides section .fragment.zoom-fade-out-soft.visible {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.75);
     transition: all 1s ease;
 }
 
@@ -1222,7 +1244,7 @@ html.reveal-full-page {
 }
 
 .reveal[data-transition-speed=slow]>.backgrounds .slide-background {
-    transition-duration: 1.2s
+    transition-duration: 2s
 }
 
 .reveal [data-auto-animate-target^=unmatched] {
@@ -1324,7 +1346,7 @@ html.reveal-full-page {
 }
 
 .reveal.has-parallax-background[data-transition-speed=slow] .backgrounds {
-    transition-duration: 1.2s
+    transition-duration: 2s
 }
 
 .reveal>.overlay {
