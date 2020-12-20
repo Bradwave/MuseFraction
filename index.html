@@ -7,7 +7,7 @@
 
 	<link rel="icon" type="image/png" href="images/icon.png">
 
-	<title>MuseFraction</title>
+	<title>M∪𝕊ᵢ⊂A</title>
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
@@ -113,7 +113,12 @@
 				</div>
 				<div class="fragment fade-down" style="margin-top: 5%;">
 					<p>
-						Quindi $\exists \, f \in \mathbb{R} \: : \: f \in \mathbb{S} \,$,<br>
+						Quindi <span class="number tooltip top">
+							$\exists \, f \in \mathbb{R} \: : \: f \in \mathbb{S} \,$
+							<span class="tooltiptext top explanation">
+								Esiste una frequenza $f$ appartenente a $\mathbb{S}$.
+							</span>
+						</span>,<br>
 						detta <bem class="fragment highlight-yellow">frequenza fondamentale</bem>.
 					</p>
 				</div>
@@ -131,7 +136,13 @@
 				</p>
 				<blockquote data-id="s-def" class="def" style="margin-top: 5%;">
 					<div class="fragment fade-in">
-						$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S} \, , \ k=\pm 1 $$
+						<span class="number tooltip top">
+							$$ f \in \mathbb{S} \ \Longrightarrow \ 2f \, , \, {1 \over 2}f \in \mathbb{S}$$
+							<span class="tooltiptext top explanation">
+								Se $f$ appartiene a $\mathbb{S}$,<br>
+								allora $2f$ e ${1 \over 2}f$ appartengono a $\mathbb{S}$.
+							</span>
+						</span>
 					</div>
 					<div class="number def auto first"></div>
 				</blockquote>
@@ -142,8 +153,17 @@
 				</div>
 				<div class="fragment fade-down">
 					<blockquote class="theorem">
-						<b>Teorema</b>
-						$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S} \, , \ \forall k \in \mathbb{Z}$$
+						<b>Teorema</b><br>
+						<span class="number tooltip top">
+							$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S}
+							\, , \ \forall k \in \mathbb{Z}$$
+							<span class="tooltiptext top explanation">
+								Se $f$ appartiene a $\mathbb{S}$,<br>
+								allora $2f, \, 4f, \, 8f, \, ...$
+								e ${1 \over 2}f, \, {1 \over 4}f, \, {1 \over 8}f, \, ...$<br>
+								appartengono a $\mathbb{S}$.
+							</span>
+						</span>
 						<div class="number theorem auto second"></div>
 					</blockquote>
 				</div>
@@ -161,7 +181,13 @@
 				</p>
 				<div class="fragment fade-in">
 					<blockquote data-id="s-def" class="def" style="margin-top: 5%;">
-						$$ f \in \mathbb{S} \ \Longrightarrow \ 3f \in \mathbb{S}$$
+						<span class="number tooltip top">
+							$$ f \in \mathbb{S} \ \Longrightarrow \ 3f \in \mathbb{S}$$
+							<span class="tooltiptext top explanation">
+								Se $f$ appartiene a $\mathbb{S}$,<br>
+								allora $3f$ appartiene a $\mathbb{S}$.
+							</span>
+						</span>
 						<div class="number def auto first "></div>
 					</blockquote>
 				</div>
@@ -170,7 +196,7 @@
 						Combinando <span class="number def tooltip top">(1.2)
 							<span class="tooltiptext top def">
 								<a href="#/sistema-musicale">
-									$$ f \in \mathbb{S} \ \Longrightarrow \ 2^kf \in \mathbb{S} \, , \ k=\pm 1 $$
+									$$ f \in \mathbb{S} \ \Longrightarrow \ 2f, \, \cfrac{1}{2}f \in \mathbb{S} $$
 								</a>
 							</span>
 						</span> e <span class="number def tooltip top">(1.4)
@@ -185,8 +211,13 @@
 				<div class="fragment fade-in" style="margin-top: 4%;">
 					<blockquote data-id="s-theorem" class="theorem">
 						<b>Teorema</b>
-						$$ f \in \mathbb{S} \ \Longrightarrow \ \dfrac{3}{2}f \in \mathbb{S} \, , \ \forall k \in
-						\mathbb{Z} $$
+						<span class="number tooltip top">
+							$$ f \in \mathbb{S} \ \Longrightarrow \ \dfrac{3}{2}f \in \mathbb{S} $$
+							<span class="tooltiptext top explanation">
+								Se $f$ appartiene a $\mathbb{S}$,<br>
+								allora ${3 \over 2}f$ appartiene a $\mathbb{S}$.
+							</span>
+						</span>
 						<div class="number theorem auto second"></div>
 					</blockquote>
 				</div>
@@ -239,8 +270,15 @@
 								</a>
 							</span>
 						</span> e ottenere
-						$ \bigg\{ \left( \dfrac{3}{2} \right)^n f \: : \: n \in \mathbb{N} \bigg\} \subset \mathbb{S}
-						\,$.
+						<span class="number tooltip top">
+							$ \bigg\{ \left( \dfrac{3}{2} \right)^n f
+							\: : \: n \in \mathbb{N} \bigg\} \subset \mathbb{S} \,$.
+							<span class="tooltiptext top explanation">
+								$f, \, {3 \over 2}f, \, \left({3 \over 2}\right)^2f,
+								\, \left({3 \over 2}\right)^3f, \, ...$
+								appartengono a $\mathbb{S}$.
+							</span>
+						</span>
 					</p>
 				</div>
 				<div class="fragment fade-down">
@@ -517,7 +555,7 @@
 					<p id="label" style="margin-top: 30px;">$x$</p>
 					<div class="fragment fade-in" data-fragment-index="6" style="z-index: -1;">
 						<div class="fragment fade-out" data-fragment-index="8">
-							<p id="h-line" style="z-index: -1; width: 152px; --color: var(--blue);"></p>
+							<p id="h-line" style="z-index: -1; width: 152px; height: 3px; --color: var(--blue);"></p>
 						</div>
 					</div>
 					<div class="r-stack fragment fade-out" data-fragment-index="8">
@@ -532,7 +570,7 @@
 						</div>
 					</div>
 					<div class="fragment fade-in" style="z-index: -1;" data-fragment-index="7">
-						<p id="h-line" style="width: 106px; --color: var(--blue);"></p>
+						<p id="h-line" style="width: 106px; height: 3px; --color: var(--blue);"></p>
 
 					</div>
 					<div class="r-stack fragment fade-in" data-fragment-index="7">
@@ -578,13 +616,24 @@
 				</div>
 				<div class="fragment fade-down" style="margin-top: 5%;" data-fragment-index="4">
 					<p>
-						Se $x \in \mathbb{Q} \,$, allora lo sviluppo è finito: $x = [a_0,a_1,...,a_n] \,$.
+						Se <span class="number tooltip top">
+							$x \in \mathbb{Q} \,$
+							<span class="tooltiptext top explanation">
+								$x$ razionale
+							</span>
+						</span>
+						, allora lo sviluppo è finito: $x = [a_0,a_1,...,a_n] \,$.
 					</p>
 				</div>
 				<div class="fragment fade-down" style="margin-top: 1%;" data-fragment-index="5">
 					<p>
-						Se $x \in \mathbb{R} \setminus \mathbb{Q} \,$, allora lo sviluppo è infinito: $x =
-						[a_0,a_1,a_2,...] \,$.
+						Se <span class="number tooltip top">
+							$x \in \mathbb{R} \setminus \mathbb{Q} \,$
+							<span class="tooltiptext top explanation">
+								$x$ irrazionale
+							</span>
+						</span>
+						, allora lo sviluppo è infinito: $x = [a_0,a_1,a_2,...] \,$.
 					</p>
 				</div>
 				<div class="fragment fade-down" style="margin-top: 7%;" data-fragment-index="6">
@@ -601,7 +650,7 @@
 				<h4>2.2 Le frazioni continue $ $</h4>
 				<hr>
 				<p>
-					Consideriamo, per esempio, il numero irrazionale (e trascendete) $\pi \in \mathbb{R} \,$.
+					Consideriamo, per esempio, il numero irrazionale (e trascendente) $\pi \in \mathbb{R} \,$.
 				</p>
 				<div class="fragment fade-down" style="margin-top: 3%;">
 					<p>
@@ -650,7 +699,7 @@
 							\ \forall n \in \mathbb{N} \,$ ,
 						</div>
 						<div class="fragment fade-down">
-							$$ \cfrac{p_n}{q_n} = [a_0,...,a_n]$$
+							$$ \cfrac{p_n}{q_n} := [a_0,...,a_n]$$
 							è una miglior approssimazione per $x$.
 							<br><br>
 						</div>
@@ -659,11 +708,8 @@
 				</div>
 			</section>
 
-			<new-chapter></new-chapter>
-			<one-formula></one-formula>
-
-			<!-- La soluzione al problema dell'approssimazione -->
-			<section id="soluzione" data-auto-animate>
+			<!-- Esercizio 1 -->
+			<section id="esercizio-1">
 				<h4>3.1 La soluzione</h4>
 				<hr>
 				<p>
@@ -682,9 +728,95 @@
 							</a>
 						</span>
 					</span>
-					e otteniamo
+					e otteniamo...
+				</p>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<hr>
+					<b>
+						Esercizio
+					</b>
+					<div class="fragment fade-down" style="margin-top: 5%;">
+						<p>
+							<em>Calcolare lo sviluppo in frazioni continue di</em><br>
+							$$ \log_2 \cfrac{3}{2} = \cfrac{log\left(\cfrac{3}{2}\right)}{log(2)} $$
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Esercizio 2 -->
+			<section id="eserczio 2">
+				<h4>3.1 La soluzione</h4>
+				<hr>
+				<p>
+					Applichiamo allora <span class="number theorem tooltip top">(2.1)
+						<span class="tooltiptext top theorem">
+							<a href="#/frazioni-continue-3">
+								$$ \cfrac{p_n}{q_n} = [a_0,...,a_n]
+								\ \text{ è una } \, m.a. \, {per} \ x = [a_0,a_1,...] $$
+							</a>
+						</span>
+					</span>
+					a <span class="number tooltip top">$\cfrac{m}{n} = \log_2 \cfrac{3}{2} \,$
+						<span class="tooltiptext top formula">
+							<a href="#/logaritmo">
+								$$\cfrac{m}{n} = \log_2 \cfrac{3}{2} \, $$
+							</a>
+						</span>
+					</span>
+					e otteniamo...
 				</p>
 				<div class="fragment fade-down" data-fragment-index="1">
+					<p>
+						$ \log_2 \cfrac{3}{2} = [0,1,1,2,2,3,1,5,2,23,2,...] $
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 4%;">
+					<hr>
+					<b style="margin-top: -2%;">
+						Esercizio
+					</b>
+					<div class="fragment fade-down" style="margin-top: 4%;">
+						<p>
+							<em>Calcolare le seguenti migliori approssimazioni di $\log_2\cfrac{3}{2}$</em><br>
+							$\cfrac{p_2}{q_2}=[0,1,1] \quad \cfrac{p_3}{q_3}=[0,1,1,2]
+							\quad \cfrac{p_4}{q_4}=[0,1,1,2,2]$
+						</p>
+						<div class="fragment fade-down" style="margin-top: 5%;">
+							<p>
+								<em>Si può notare qualcosa?</em>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<new-chapter></new-chapter>
+			<one-formula></one-formula>
+
+			<!-- La soluzione al problema dell'approssimazione -->
+			<section id="soluzione">
+				<h4>3.1 La soluzione</h4>
+				<hr>
+				<p>
+					Applichiamo allora <span class="number theorem tooltip top">(2.1)
+						<span class="tooltiptext top theorem">
+							<a href="#/frazioni-continue-3">
+								$$ \cfrac{p_n}{q_n} = [a_0,...,a_n]
+								\ \text{ è una } \, m.a. \, {per} \ x = [a_0,a_1,...] $$
+							</a>
+						</span>
+					</span>
+					a <span class="number tooltip top">$\cfrac{m}{n} = \log_2 \cfrac{3}{2} \,$
+						<span class="tooltiptext top formula">
+							<a href="#/logaritmo">
+								$$\cfrac{m}{n} = \log_2 \cfrac{3}{2} \, $$
+							</a>
+						</span>
+					</span>
+					e otteniamo...
+				</p>
+				<div>
 					<p>
 						$ \log_2 \cfrac{3}{2} = [0,1,1,2,2,3,1,5,2,23,2,...] $
 					</p>
@@ -976,15 +1108,20 @@
 				</div>
 				<div class="fragment fade-in" style="margin-top: 5%;">
 					<blockquote data-id="block" class="def">
-						$$ f \in \mathbb{S}_N \ \Longrightarrow \ \cfrac{1}{3}f \in \mathbb{S}_N
-						\ \land \ \cfrac{1}{5}f \in \mathbb{S}_N $$
+						<span class="number tooltip top">
+							$$ f \in \mathbb{S}_N
+							\ \Longrightarrow \ \cfrac{1}{3}f , \, \cfrac{1}{5}f \in \mathbb{S}_N $$
+							<span class="tooltiptext top explanation">
+								Se $f$ appartiene a $\mathbb{S}$,<br>
+								allora ${1 \over 3}f$ e ${1 \over 5}f$ appartengono a $\mathbb{S}$.
+							</span>
+						</span>
 						<div class="number def auto first"></div>
 					</blockquote>
 				</div>
 				<div class="fragment fade-down" style="margin-top: 5%;">
 					<blockquote class="def">
-						$$ f \in \mathbb{S}_N \ \Longrightarrow \ 5f \in \mathbb{S}_N
-						\ \land \ 7f \in \mathbb{S}_N $$
+						$$ f \in \mathbb{S}_N \ \Longrightarrow \ 5f, \, 7f \in \mathbb{S}_N $$
 						<div class="number def auto second"></div>
 					</blockquote>
 				</div>
@@ -1359,8 +1496,219 @@
 				class="center">
 			</section>
 
-			<section id="fine" class="center">
-				fine...
+			<!-- Esercizi -->
+			<section id="scala-cinese">
+				<h4>Esercizio: la scala cinese</h4>
+				<hr>
+				<div class="fragment fade-down" style="margin-top: 8%;">
+					<p>
+						La <bem class="fragment highlight-yellow">scala musciale cinese</bem>
+						è una scala pentatonica,<br>
+						ovvero è composta da <bem class="fragment highlight-yellow">5 note</bem>.<br>
+					</p>
+					<div class="fragment fade-down" style="margin-top: 3%;">
+						<p>
+							Supponiamo di costruire il corrispondente sistema musciale $\mathbb{S}_C$<br>
+							usando le regole <span class="number def tooltip top">(1.2)
+								<span class="tooltiptext top def">
+									<a href="#/sistema-musicale">
+										$$ f \in \mathbb{S} \ \Longrightarrow \ 2f, \, \cfrac{1}{2}f \in \mathbb{S}
+										$$
+									</a>
+								</span>
+							</span> e <span class="number def tooltip top">(1.4)
+								<span class="tooltiptext top def">
+									<a href="#/sistema-musicale-3">
+										$$ f \in \mathbb{S} \ \Longrightarrow \ 3f \in \mathbb{S} $$
+									</a>
+								</span>
+							</span>, come per il sistema pitagorico $\mathbb{S}_P$.
+						</p>
+					</div>
+					<div class="fragment fade-down" style="margin-top: 8%;">
+						<p>
+							<em>
+								Come può essere matematicamente interpretata la scala cinese?<br>
+								Ovvero, 5 è un "buon numero" di note? Perché?
+							</em>
+						</p>
+					</div>
+					<div class="fragment fade-down" style="margin-top: 3%;">
+						<p>
+							<em>
+								Quale nota nella scala corrisponde all'intervallo di quinta?
+							</em>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="comma-pitagorico">
+				<h4>Esercizio: il comma pitagorico</h4>
+				<hr>
+				<div style="margin-top: 7%;">
+					<p>
+						Abbiamo visto che, reiterando la regola <span class="number theorem tooltip top">(1.5)
+							<span class="tooltiptext top theorem">
+								<a href="#/animazione-sistema/11">
+									$$ f \in \mathbb{S} \ \Longrightarrow \ \dfrac{3}{2}f \in \mathbb{S} $$
+								</a>
+							</span>
+						</span> e dividendo per 2 all'occorrenza<br>
+						in modo da ottere frequenze nella stessa ottava, è possibile costruire la scala pitagorica.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						Tuttavia, dopo un certo numero $n$ di passaggi,
+						otteniamo una frequenza $\left(\cfrac{3}{2}\right)^nf$<br>
+						che assomiglia alla frequenza $2^mf$, costruita applicando la regola
+						<span class="number def tooltip top">(1.2)
+							<span class="tooltiptext top def">
+								<a href="#/sistema-musicale">
+									$$ f \in \mathbb{S} \ \Longrightarrow \ 2f, \, \cfrac{1}{2}f \in \mathbb{S}
+									$$
+								</a>
+							</span>
+						</span>.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 3%;">
+					<p>
+						Allora $\cfrac{1}{2^m}\left(\cfrac{3}{2}\right)^nf = \cfrac{3^n}{2^{n+m}}f \approx f \,$.<br>
+						L'intervallo $\cfrac{3^n}{2^{n+m}}$ si definisce <bem class="fragment highlight-yellow">
+							comma pitagorico
+						</bem>.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin: 5%;">
+					<p>
+						<em>
+							Calcolare il comma pitagorico per il sistema pitagorico e cinese.<br>
+							Che cosa rappresenta?
+						</em>
+					</p>
+				</div>
+			</section>
+
+			<section id="esercizio-bonus">
+				<h4>Esercizio Bonus</h4>
+				<hr>
+				<div style="margin-top: 14%;">
+					<p>
+						Abbiamo visto che, nel temperamento equabile,<br>
+						l'ottava è divisa in 12 intervalli uguali di valore $2^{1 \over 12}$.
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 5%;">
+					<p>
+						<em>A quale frequenza corrisponde la quinta in $\mathbb{S}_E$?</em>
+					</p>
+				</div>
+				<div class="fragment fade-down" style="margin-top: 2%;">
+					<p>
+						<em>
+							La quinta in $\mathbb{S}_P$ e in $\mathbb{S}_S$ coincidono?<br>
+							Se non coincidono, qual è l'intervallo tra la le due?
+						</em>
+					</p>
+				</div>
+			</section>
+
+			<!-- Bibliografia -->
+			<section id="bibliografia">
+				<h4>Bibliografia $ $</h4>
+				<hr>
+				<div style="letter-spacing: 1px;">
+					<ol style="list-style-type: decimal">
+						<li>
+							C. D. Olds, <em>Frazioni Continue</em>, Bologna, Zanichelli, 1968<br>
+							(<em>Continued Fractions</em>, Yale University, 1963).
+						</li>
+						<li>
+							E. G. Dunne, M. McConnel, <em>Pianos and Continued Fractions</em>,
+							Mathematics Magazine, vol. 2, n. 2, 1999
+							e disponibile presso <a href="https://oeis.org/DUNNE/TEMPERAMENT.HTML" class="biblio">
+								oeis.org/DUNNE/TEMPERAMENT.HTML
+							</a>.
+						</li>
+						<li>
+							E. G. Dunne, <em>This note's for you: A mathematical temperament</em>, 2000<br>
+							disponibile presso <a href="http://oeis.org/DUNNE/Temperament2x.PDF" class="biblio">
+								oeis.org/DUNNE/Temperament2x.PDF
+							</a>.
+						</li>
+						<li>
+							J. Douthett, R. Krantz,
+							<em>Continued fractions, best measurements, and muscial scales and intervals</em>,
+							Journal of Mathmatics and Musical, 2007.
+						</li>
+						<li>
+							C. Gasquet e P. Witomksi, <em>Fourier Analysis and Applications</em>, 1<sup>a</sup> ed., New
+							York, NY, Springer, 1999.
+						</li>
+						<li>
+							<a href="https://pages.mtu.edu/~suits/scales.html" target="_blank">
+								<em>Scales: Just vs Equal Temperament</em>
+							</a>, su <a class="biblio" href="https://pages.mtu.edu/~suits/scales.html"
+								target="_blank">Physics of Music - Notes
+							</a>.
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<!-- Documentazioni -->
+			<section id="docmunetazioni">
+				<h4>Documentazioni $ $</h4>
+				<hr>
+				<div style="letter-spacing: 1px;">
+					<ol start="7" style="list-style-type: decimal">
+						<li>
+							<em>p5.js</em>, su <a href="https://p5js.org" target="_blank">p5js.org</a>
+						</li>
+						<li>
+							<em>p5.js</em>, su <a href="https://thecodingtrain.com/Tutorials/" class="biblio"
+								target="_blank">thecodingtrain.com/Tutorials</a>
+						</li>
+						<li>
+							<em>reveal.js</em>, su <a href="https://revealjs.com" class="biblio" target="_blank">
+								revealjs.com
+							</a>
+						</li>
+						<li>
+							<em>Tone.js</em>, su <a href="https://tonejs.github.io/" class="biblio"
+								target="_blank">tonejs.github.io</a>
+						</li>
+						<li>
+							<em>MathJax</em>, su <a href="https://www.mathjax.org/" target="_blank" class="biblio">
+								www.mathjax.org
+							</a>
+						</li>
+						<li>
+							<a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference"
+								target="_blank"><em>MathJax
+									basic tutorial and quick reference</em></a>, su <a class="biblio"
+								href="https://math.meta.stackexchange.com/"
+								target="_blank">math.meta.stackexchange.com/</a>
+						</li>
+						<li>
+							Y. Xie, <a href="https://bookdown.org/yihui/bookdown/" target="_blank" class="biblio">
+								<em>Bookdown: Authoring Books and
+									Technical Documents with R Markdown</em>,
+							</a>2020, su <a href="https://bookdown.org/yihui/bookdown/" class="biblio">
+								bookdown.org/yihui/bookdown/
+							</a>.
+						</li>
+						<li>
+							Y. Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, Boca
+							Raton, Florida, Chapman e Hall/CRC, 2016
+						</li>
+						<li>Y. Xie, J. J. Allaire e G. Grolemund, <em>R markdown: The definitive guide</em>, Boca
+							Raton, Florida, Chapman e Hall/CRC, 2018.
+						</li>
+					</ol>
+				</div>
 			</section>
 
 		</div>
@@ -1378,9 +1726,12 @@
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
-			// controls: false,
-			// keyboard: false,
-			// touch: false,
+
+			/** Enable and disable controls *
+			controls: false,
+			keyboard: false,
+			touch: false,
+			/**/
 
 			center: false,
 			transition: 'fade',
@@ -1392,13 +1743,11 @@
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
 
 			multiplex: {
-				// Example values. To generate your own, see the socket.io server instructions.
 				secret: null, // null so the clients do not have control of the master presentation
 				id: '2ff8e0840bdd054e', // id, obtained from socket.io server
 				url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
 			},
 
-			// Don't forget to add the dependencies
 			dependencies: [
 				// Multiplex
 				{ src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },

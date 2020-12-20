@@ -113,6 +113,14 @@ body {
 }
 
 /*********************************************
+ * LISTS
+ *********************************************/
+
+.reveal li {
+  margin: 10px 0;
+}
+
+/*********************************************
  * FORMULA NUMBERS
  *********************************************/
 
@@ -258,7 +266,7 @@ body {
 .tooltip .tooltiptext {
   visibility: hidden;
   opacity: 1;
-  background-color: #0D0D0D;
+  background-color: #111111;
   color: #fff;
   text-shadow: none;
   text-align: center;
@@ -304,6 +312,13 @@ body {
   border-left: 10px solid var(--transparent);
 }
 
+.tooltip .tooltiptext.explanation {
+  width: 160%;
+  padding: 15px;
+  font-weight: normal;
+  border-left: 0px;
+}
+
 /* Tooltip arrow */
 
 .tooltip .tooltiptext::after {
@@ -318,12 +333,14 @@ body {
 }
 
 .tooltip .tooltiptext.bottom::after {
-  border-color: transparent transparent #0D0D0D transparent;
+  transform: translate(0px, 1px);
+  border-color: transparent transparent #111111 transparent;
   bottom: 100%;
 }
 
 .tooltip .tooltiptext.top::after {
-  border-color: #0D0D0D transparent transparent transparent;
+  transform: translate(0px, -1px);
+  border-color: #111111 transparent transparent transparent;
   top: 100%;
 }
 
@@ -578,6 +595,10 @@ body {
 
 .reveal button.link:active a {
   text-shadow: 0 0 10px var(--blue);
+}
+
+.reveal a.biblio {
+  text-decoration: underline;
 }
 
 /*********************************************
