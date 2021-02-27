@@ -1,7 +1,5 @@
 # Un'interpretazione matematica del problema del temperamento musicale
 
----
-
 _Università degli Studi di Torino_
 
 _Matteo Bramardi_<br>
@@ -13,8 +11,6 @@ _Prof. Ferdinando Arzarello_
 
 La presentazione è stata realizzata con [_**Reveal.js**_](https://revealjs.com/), un framework _open source_ per presentazioni HTML a cui ho apportato diverse personalizzazioni.<br>
 Ciò mi ha permesso di **integrare perfettamente** le **slide interattive** nell'ambiente della presentazione, senza richiedere all'utente operazioni aggiuntive. Inoltre, il file HTML può essere visualizzato da un'ampia gamma di dispositivi tramite un qualsiasi _browser_ e le ridotte dimensioni del file lo rendono ideale per la distribuzione online.
-
----
 
 ## Slide interattive
 
@@ -40,7 +36,7 @@ Sono disponibili tre versioni dell'applicazione:
 2. [La seconda](https://bradwave.github.io/MuseFraction/animations/piano-2.html) ha attivi i primi due tasti e quello per il temperamento pitagorico.
 3. [La terza](https://bradwave.github.io/MuseFraction/animations/piano-3.html) ha attivi tutti i tasti.
 
----
+## Relazione
 
 È inoltre disponibile una [relazione dell'attività](https://bradwave.github.io/MuseFraction/doc/Relazione%20dell'attivit%C3%A0.pdf), contenente un commento dettagliato dei contenuti e delle modalità
 
