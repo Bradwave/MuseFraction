@@ -1,6 +1,54 @@
+# Un'interpretazione matematica del problema del temperamento musicale
+
+---
+
+_Università degli Studi di Torino_
+
+_Matteo Bramardi_<br>
+_Prof. Ferdinando Arzarello_
+
+## Presentazione
+
+È possibile visionare la presentazione al seguente link: [bradwave.github.io/MuseFraction](https://bradwave.github.io/MuseFraction).
+
+La presentazione è stata realizzata con [_**Reveal.js**_](https://revealjs.com/), un framework _open source_ per presentazioni HTML a cui ho apportato diverse personalizzazioni.<br>
+Ciò mi ha permesso di **integrare perfettamente** le **slide interattive** nell'ambiente della presentazione, senza richiedere all'utente operazioni aggiuntive. Inoltre, il file HTML può essere visualizzato da un'ampia gamma di dispositivi tramite un qualsiasi _browser_ e le ridotte dimensioni del file lo rendono ideale per la distribuzione online.
+
+---
+
+## Slide interattive
+
+Le slide interattive si basano su un'applicazione che modellizza l'ottava di una tastiera.
+
+Questa applicazione viene impiegata in tre diversi momenti della presentazione e costituisce un tentativo di _gamification_, ovvero l’implementazione di attività e tecniche ludiche a fini didattici.
+
+È possibile **suonare i tasti** cliccando su di essi oppure digitando il tasto - della tastiera del PC - a loro assegnato, ma anche spostarli trascinandoli e **modificandone** così **la frequenza** in base alla loro posizione lungo l’asse orizzontale. Per ogni tasto è indicata la frequenza corrispondente.
+
+L’obiettivo è quello di spostare i tasti in modo da ottenere una configurazione che permetta la riproduzione di melodie piacevoli. È ovviamente impossibile valutare il grado di piacevolezza, parametro del tutto soggetto al gusto personale. Pertanto, un buon criterio di valutazione è rappresentato dalla possibilità di  iprodurre melodie già conosciute.
+
+Al di sopra della tastiera è presente una serie di tasti:
+
+- **⟿** consente di riprodurre la nota melodia dell’Inno alla Gioia. Si noti che il software tiene conto della posizione corrente dei vari tasti, pertanto i risultati potrebbero suonare bizzarri. Il fine è quello di consentire la riproduzione di una nota melodia anche a chi non sapesse suonare uno strumento a tastiera.
+- **⥃** consente invece di disporre i tasti in modo casuale.
+- **𝕊<sub>P</sub>** consente di disporre i tasti secondo il temperamento pitagorico.
+- **𝕊<sub>N</sub>** consente di disporre i tasti secondo il temperamento naturale.
+- **𝕊<sub>E</sub>** consente di disporre i tasti secondo il temperamento equabile.
+
+Sono disponibili tre versioni dell'applicazione:
+
+1. [La prima](https://bradwave.github.io/MuseFraction/animations/piano-1.html) ha attivi solamente i primi due tasti.
+2. [La seconda](https://bradwave.github.io/MuseFraction/animations/piano-2.html) ha attivi i primi due tasti e quello per il temperamento pitagorico.
+3. [La terza](https://bradwave.github.io/MuseFraction/animations/piano-3.html) ha attivi tutti i tasti.
+
+---
+
+È inoltre disponibile una [relazione dell'attività](https://bradwave.github.io/MuseFraction/doc/Relazione%20dell'attivit%C3%A0.pdf), contenente un commento dettagliato dei contenuti e delle modalità
+
+---
+
 <p align="center">
   <a href="https://revealjs.com">
-  <img src="https://hakim-static.s3.amazonaws.com/reveal-js/logo/v1/reveal-black-text.svg" alt="reveal.js" width="450">
+  <img src="https://hakim-static.s3.amazonaws.com/reveal-js/logo/v1/reveal-black-text.svg" alt="reveal.js" width="350">
   </a>
   <br><br>
   <a href="https://github.com/hakimel/reveal.js/actions"><img src="https://github.com/hakimel/reveal.js/workflows/tests/badge.svg"></a>
